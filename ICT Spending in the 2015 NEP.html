@@ -1675,20 +1675,30 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is the accompanying notebook for all data used in the ROOT ACCESS column on bulatlat.com You can modify this to analyze other part of the NEP 2015. This notebook is focused on the ICT component.</p>
+<p>Author: Rick Bahague / rick (at) opensourceshoppe (dot) com.</p>
+<p>Download datasets from the DBM website.</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[133]:
+In&nbsp;[631]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
-<span class="o">%</span><span class="k">pylab</span> <span class="n">inline</span>
+<span class="c">#%pylab inline</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">mpld3</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="kn">as</span> <span class="nn">pylab</span>
-<span class="kn">import</span> <span class="nn">plotly</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
 
@@ -1706,22 +1716,6 @@ In&nbsp;[133]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Populating the interactive namespace from numpy and matplotlib
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1736,7 +1730,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[237]:
+In&nbsp;[632]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1762,7 +1756,8 @@ In&nbsp;[237]:
 <span class="n">new_approp_data</span> <span class="o">=</span> <span class="n">new_approp</span><span class="p">[</span><span class="n">new_approp</span><span class="o">.</span><span class="n">Amount</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">][[</span><span class="s">&#39;Department&#39;</span><span class="p">,</span><span class="s">&#39;Agency&#39;</span><span class="p">,</span><span class="s">&#39;Description&#39;</span><span class="p">,</span><span class="s">&#39;Category&#39;</span><span class="p">,</span><span class="s">&#39;Objective&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span>
 <span class="n">new_approp_data</span><span class="p">[</span><span class="s">&#39;NEP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;NEW&#39;</span>
 <span class="n">all_data</span> <span class="o">=</span> <span class="n">auto_approp_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_approp_data</span><span class="p">)</span>
-<span class="c">#all_data[ [u&#39;NEP&#39;,u&#39;Department&#39;, u&#39;Agency&#39;, u&#39;Description&#39;, u&#39;Category&#39;, u&#39;Objective&#39;, u&#39;Amount&#39;]].to_csv(&#39;data.csv&#39;)</span>
+<span class="n">all_data</span><span class="p">[</span> <span class="p">[</span><span class="s">u&#39;NEP&#39;</span><span class="p">,</span><span class="s">u&#39;Department&#39;</span><span class="p">,</span> <span class="s">u&#39;Agency&#39;</span><span class="p">,</span> <span class="s">u&#39;Description&#39;</span><span class="p">,</span> <span class="s">u&#39;Category&#39;</span><span class="p">,</span> <span class="s">u&#39;Objective&#39;</span><span class="p">,</span> <span class="s">u&#39;Amount&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">&#39;data.csv&#39;</span><span class="p">)</span>
+<span class="c">#all_data.head()</span>
 </pre></div>
 
 </div>
@@ -1783,7 +1778,7 @@ In&nbsp;[237]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[109]:
+In&nbsp;[633]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1799,7 +1794,7 @@ In&nbsp;[109]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[109]:</div>
+    Out[633]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -1813,6 +1808,15 @@ In&nbsp;[109]:
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sa kabuuan, mas malaki ng Php 341.7B ang gagastusin ng Administrasyon sa susunod na taon kung ihahambing sa budget ngayong taon.</p>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1836,63 +1840,16 @@ In&nbsp;[109]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[110]:
+In&nbsp;[634]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="n">expense_class</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[[</span><span class="s">&#39;Category&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Category&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">expense_class</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s">&#39;Amount&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">expense_class</span>
+<span class="c">#expense_class</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[110]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Amount</th>
-    </tr>
-    <tr>
-      <th>Category</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Maintenance and Other Operating Expenses</th>
-      <td> 935488575</td>
-    </tr>
-    <tr>
-      <th>Personnel Services</th>
-      <td> 761745344</td>
-    </tr>
-    <tr>
-      <th>Capital Outlays</th>
-      <td> 534222701</td>
-    </tr>
-    <tr>
-      <th>Financial Expenses</th>
-      <td> 374543380</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -1900,7 +1857,7 @@ In&nbsp;[110]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[111]:
+In&nbsp;[635]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1912,58 +1869,10 @@ In&nbsp;[111]:
 <span class="n">dbm_presentation_class</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span>
 <span class="n">dbm_presentation_class</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
 <span class="n">check</span><span class="o">=</span><span class="n">dbm_presentation_class</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">expense_class</span><span class="p">,</span><span class="n">lsuffix</span><span class="o">=</span><span class="s">&#39;_DBM&#39;</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s">&#39;left&#39;</span><span class="p">)</span>
-<span class="n">check</span>
+<span class="c">#check</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[111]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Amount_DBM</th>
-      <th>Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Financial Expenses</th>
-      <td> 374582000</td>
-      <td> 374543380</td>
-    </tr>
-    <tr>
-      <th>Maintenance and Other Operating Expenses</th>
-      <td> 937593000</td>
-      <td> 935488575</td>
-    </tr>
-    <tr>
-      <th>Capital Outlays</th>
-      <td> 532080000</td>
-      <td> 534222701</td>
-    </tr>
-    <tr>
-      <th>Personnel Services</th>
-      <td> 761745000</td>
-      <td> 761745344</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -1971,57 +1880,14 @@ In&nbsp;[111]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[112]:
+In&nbsp;[636]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">expense_class</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">dbm_presentation_class</span><span class="p">)</span>
+<div class="highlight"><pre><span class="c">#expense_class.sub(dbm_presentation_class)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">
-    Out[112]:</div>
-
-<div class="output_html rendered_html output_subarea output_pyout">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Capital Outlays</th>
-      <td> 2142701</td>
-    </tr>
-    <tr>
-      <th>Financial Expenses</th>
-      <td>  -38620</td>
-    </tr>
-    <tr>
-      <th>Maintenance and Other Operating Expenses</th>
-      <td>-2104425</td>
-    </tr>
-    <tr>
-      <th>Personnel Services</th>
-      <td>     344</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -2029,7 +1895,7 @@ In&nbsp;[112]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[113]:
+In&nbsp;[637]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2045,7 +1911,7 @@ In&nbsp;[113]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[113]:</div>
+    Out[637]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -2075,14 +1941,14 @@ dtype: float64
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[114]:
+In&nbsp;[638]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="c">#all_data[[&#39;Department&#39;]].groupby([&#39;Department&#39;,&#39;Amount&#39;]).sum()</span>
-<span class="c">#all_data.head()</span>
-<span class="n">departments</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[[</span><span class="s">&#39;Department&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Department&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">departments</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[[</span><span class="s">&#39;Department&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Department&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">departments</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="s">&#39;Amount&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">departments</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">departments</span><span class="p">[</span><span class="s">&#39;% Share&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">departments</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">t</span><span class="o">*</span> <span class="mi">100</span>
 <span class="n">departments</span>
 </pre></div>
 
@@ -2095,7 +1961,7 @@ In&nbsp;[114]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[114]:</div>
+    Out[638]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -2104,9 +1970,11 @@ In&nbsp;[114]:
     <tr style="text-align: right;">
       <th></th>
       <th>Amount</th>
+      <th>% Share</th>
     </tr>
     <tr>
       <th>Department</th>
+      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -2114,214 +1982,267 @@ In&nbsp;[114]:
     <tr>
       <th>Internal Revenue Allotment</th>
       <td> 389860429</td>
+      <td> 14.960109</td>
     </tr>
     <tr>
       <th>Debt Interest Payments</th>
       <td> 372863000</td>
+      <td> 14.307866</td>
     </tr>
     <tr>
       <th>Department of Education (DepEd)</th>
       <td> 339288006</td>
+      <td> 13.019494</td>
     </tr>
     <tr>
       <th>Department of Public Works and Highways (DPWH)</th>
       <td> 300519120</td>
+      <td> 11.531816</td>
     </tr>
     <tr>
       <th>Pension and Gratuity Fund</th>
       <td> 140566386</td>
+      <td>  5.393952</td>
     </tr>
     <tr>
       <th>Miscellaneous Personnel Benefits Fund</th>
       <td> 118142443</td>
+      <td>  4.533478</td>
     </tr>
     <tr>
       <th>Department of Social Welfare and Development (DSWD)</th>
       <td> 108969695</td>
+      <td>  4.181493</td>
     </tr>
     <tr>
       <th>Department of the Interior and Local Government (DILG)</th>
       <td> 105734749</td>
+      <td>  4.057358</td>
     </tr>
     <tr>
       <th>Department of National Defense (DND)</th>
       <td>  99639336</td>
+      <td>  3.823459</td>
     </tr>
     <tr>
       <th>Department of Health (DOH)</th>
       <td>  88020862</td>
+      <td>  3.377623</td>
     </tr>
     <tr>
       <th>Budgetary Support to Government Corporations</th>
       <td>  62635338</td>
+      <td>  2.403505</td>
     </tr>
     <tr>
       <th>Department of Transportation and Communications (DOTC)</th>
       <td>  54537699</td>
+      <td>  2.092774</td>
     </tr>
     <tr>
       <th>Department of Agriculture (DA)</th>
       <td>  49061490</td>
+      <td>  1.882636</td>
     </tr>
     <tr>
       <th>State Universities and Colleges (SUCs)</th>
       <td>  43342336</td>
+      <td>  1.663175</td>
     </tr>
     <tr>
       <th>Special Shares of LGUs in the Proceeds of National Taxes</th>
       <td>  27904053</td>
+      <td>  1.070762</td>
     </tr>
     <tr>
       <th>Net Lending</th>
       <td>  26500000</td>
+      <td>  1.016884</td>
     </tr>
     <tr>
       <th>Customs duties and taxes, including tax expenditures</th>
       <td>  25475000</td>
+      <td>  0.977552</td>
     </tr>
     <tr>
       <th>Autonomous Region in Muslim Mindanao (ARMM)</th>
       <td>  25229264</td>
+      <td>  0.968122</td>
     </tr>
     <tr>
       <th>Department of Environment and Natural Resources (DENR)</th>
       <td>  21274446</td>
+      <td>  0.816364</td>
     </tr>
     <tr>
       <th>The Judiciary </th>
       <td>  19499422</td>
+      <td>  0.748251</td>
     </tr>
     <tr>
       <th>Department of Science and Technology (DOST)</th>
       <td>  19351916</td>
+      <td>  0.742591</td>
     </tr>
     <tr>
       <th>Commission on Elections (COMELEC)</th>
       <td>  16944100</td>
+      <td>  0.650196</td>
     </tr>
     <tr>
       <th>Department of Finance (DOF)</th>
       <td>  14346441</td>
+      <td>  0.550516</td>
     </tr>
     <tr>
       <th>National Disaster Risk Reduction and Management Fund ( Calamity Fund )</th>
       <td>  14000000</td>
+      <td>  0.537222</td>
     </tr>
     <tr>
       <th>Department of Foreign Affairs (DFA)</th>
       <td>  12969177</td>
+      <td>  0.497666</td>
     </tr>
     <tr>
       <th>Other Executive Offices</th>
       <td>  12722911</td>
+      <td>  0.488216</td>
     </tr>
     <tr>
       <th>Department of Labor and Employment (DOLE)</th>
       <td>  12093761</td>
+      <td>  0.464074</td>
     </tr>
     <tr>
       <th>Department of Justice (DOJ)</th>
       <td>  11818194</td>
+      <td>  0.453499</td>
     </tr>
     <tr>
       <th>Congress of the Philippines</th>
       <td>  11090677</td>
+      <td>  0.425582</td>
     </tr>
     <tr>
       <th>Department of Agrarian Reform (DAR)</th>
       <td>  10586174</td>
+      <td>  0.406223</td>
     </tr>
     <tr>
       <th>Commission on Audit (COA)</th>
       <td>   8162753</td>
+      <td>  0.313229</td>
     </tr>
     <tr>
       <th>International Commitments Fund</th>
       <td>   7443963</td>
+      <td>  0.285647</td>
     </tr>
     <tr>
       <th>National Economic and Development Authority (NEDA)</th>
       <td>   6409563</td>
+      <td>  0.245954</td>
     </tr>
     <tr>
       <th>Department of Energy (DOE)</th>
       <td>   4462932</td>
+      <td>  0.171256</td>
     </tr>
     <tr>
       <th>Department of Trade and Industry (DTI)</th>
       <td>   3750260</td>
+      <td>  0.143909</td>
     </tr>
     <tr>
       <th>Local Government Support Fund</th>
       <td>   2989062</td>
+      <td>  0.114699</td>
     </tr>
     <tr>
       <th>Office of the President (OP)</th>
       <td>   2602457</td>
+      <td>  0.099864</td>
     </tr>
     <tr>
       <th>Department of Tourism (DOT)</th>
       <td>   2181924</td>
+      <td>  0.083727</td>
     </tr>
     <tr>
       <th>Contingent Fund</th>
       <td>   2000000</td>
+      <td>  0.076746</td>
     </tr>
     <tr>
       <th>Allocations to Local Government Units</th>
       <td>   1990362</td>
+      <td>  0.076376</td>
     </tr>
     <tr>
       <th>Office of the Ombudsman</th>
       <td>   1731504</td>
+      <td>  0.066443</td>
     </tr>
     <tr>
       <th>Department of Budget and Management (DBM)</th>
       <td>   1455942</td>
+      <td>  0.055869</td>
     </tr>
     <tr>
       <th>Civil Service Commission (CSC)</th>
       <td>   1175924</td>
+      <td>  0.045124</td>
     </tr>
     <tr>
       <th>Presidential Communications Operations Office (PCOO)</th>
       <td>   1021972</td>
+      <td>  0.039216</td>
     </tr>
     <tr>
       <th>Rehabilitation and Reconstruction Program</th>
       <td>   1000000</td>
+      <td>  0.038373</td>
     </tr>
     <tr>
       <th>E-Government Fund</th>
       <td>   1000000</td>
+      <td>  0.038373</td>
     </tr>
     <tr>
       <th>The Judiciary</th>
       <td>    785487</td>
+      <td>  0.030141</td>
     </tr>
     <tr>
       <th>Commission on Human Rights (CHR)</th>
       <td>    341450</td>
+      <td>  0.013102</td>
     </tr>
     <tr>
       <th>Office of the Vice-President (OVP)</th>
       <td>    226517</td>
+      <td>  0.008692</td>
     </tr>
     <tr>
       <th>Special Shares of LGUs in the Proceeds of Fire Code Fees</th>
       <td>    200000</td>
+      <td>  0.007675</td>
     </tr>
     <tr>
       <th>Barangay Officials Death Benefits Fund</th>
       <td>     50000</td>
+      <td>  0.001919</td>
     </tr>
     <tr>
       <th>BSGC - Others</th>
       <td>     28606</td>
+      <td>  0.001098</td>
     </tr>
     <tr>
       <th>Joint Legislative-Executive Councils</th>
       <td>      2897</td>
+      <td>  0.000111</td>
     </tr>
   </tbody>
 </table>
@@ -2339,6 +2260,15 @@ In&nbsp;[114]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Mahigit 53.8% ng badyet para sa 2015 ay nakalaan sa Internal Revenue Allotment (IRA), Debt Interest Payments, Department of Education (DepEd), at Department of Public Works and Highways (DPWH). Aabot naman sa P389 B ang pondong inilaan para sa mga Local Government Units (LGUs) sa pamamagitan ng IRA, P373 B naman ang awtomatikong inilaan sa pambayad utang ng bansa, P340B ang gagamitin upang suportahan ang mga programa sa edukasyon at P 300B ang inilaan para sa mga proyekto ng DPWH.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Spending-per-Objective">Spending per Objective<a class="anchor-link" href="#Spending-per-Objective">&#182;</a></h3>
 </div>
 </div>
@@ -2347,13 +2277,14 @@ In&nbsp;[114]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[115]:
+In&nbsp;[639]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">all_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-<span class="n">objectives</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[[</span><span class="s">&#39;Objective&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Objective&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">objectives</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[[</span><span class="s">&#39;Objective&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Objective&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">objectives</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="s">&#39;Amount&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">objectives</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">objectives</span><span class="p">[</span><span class="s">&#39;Share %&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">objectives</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">t</span><span class="o">*</span><span class="mi">100</span>
 <span class="n">objectives</span>
 </pre></div>
 
@@ -2366,7 +2297,7 @@ In&nbsp;[115]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[115]:</div>
+    Out[639]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -2375,9 +2306,11 @@ In&nbsp;[115]:
     <tr style="text-align: right;">
       <th></th>
       <th>Amount</th>
+      <th>Share %</th>
     </tr>
     <tr>
       <th>Objective</th>
+      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -2385,1018 +2318,1272 @@ In&nbsp;[115]:
     <tr>
       <th>Internal Revenue Allotment</th>
       <td> 390460429</td>
+      <td> 14.983132</td>
     </tr>
     <tr>
       <th>Interest Expense - Others</th>
       <td> 372863000</td>
+      <td> 14.307866</td>
     </tr>
     <tr>
       <th>Basic Salary - Civilian</th>
       <td> 251253151</td>
+      <td>  9.641333</td>
     </tr>
     <tr>
       <th>Road Networks</th>
       <td> 242850463</td>
+      <td>  9.318897</td>
     </tr>
     <tr>
       <th>Subsidies - Others</th>
       <td> 121361852</td>
+      <td>  4.657017</td>
     </tr>
     <tr>
       <th>Base Pay - Military/Uniformed Personnel (MUP)</th>
       <td>  70800487</td>
+      <td>  2.716826</td>
     </tr>
     <tr>
       <th>Pension Benefits - Military/Uniformed Personnel (MUP)</th>
       <td>  58735725</td>
+      <td>  2.253865</td>
     </tr>
     <tr>
       <th>School Buildings</th>
       <td>  55742895</td>
+      <td>  2.139021</td>
     </tr>
     <tr>
       <th>Subsidy Support to Operations of GOCCs</th>
       <td>  51796355</td>
+      <td>  1.987581</td>
     </tr>
     <tr>
       <th>Flood Control Systems</th>
       <td>  48917086</td>
+      <td>  1.877095</td>
     </tr>
     <tr>
       <th>Other Infrastructure Assets</th>
       <td>  46579649</td>
+      <td>  1.787400</td>
     </tr>
     <tr>
       <th>Financial Assistance to Local Government Units</th>
       <td>  46142218</td>
+      <td>  1.770615</td>
     </tr>
     <tr>
       <th>Lump-sum for Filling of Positions</th>
       <td>  39500273</td>
+      <td>  1.515743</td>
     </tr>
     <tr>
       <th>Terminal Leave Benefits - Civilian</th>
       <td>  36953461</td>
+      <td>  1.418015</td>
     </tr>
     <tr>
       <th>Other Machinery and Equipment</th>
       <td>  34466262</td>
+      <td>  1.322573</td>
     </tr>
     <tr>
       <th>Retirement Gratuity - Civilian</th>
       <td>  33737811</td>
+      <td>  1.294621</td>
     </tr>
     <tr>
       <th>Productivity Enhancement Incentive - Civilian</th>
       <td>  30647714</td>
+      <td>  1.176044</td>
     </tr>
     <tr>
       <th>Retirement and Life Insurance Premiums</th>
       <td>  30166510</td>
+      <td>  1.157579</td>
     </tr>
     <tr>
       <th>Taxes, Duties and Licenses</th>
       <td>  27023399</td>
+      <td>  1.036968</td>
     </tr>
     <tr>
       <th>Irrigation Systems</th>
       <td>  26603488</td>
+      <td>  1.020855</td>
     </tr>
     <tr>
       <th>Loans Outlay - Government-Owned and/or Controlled Corporations</th>
       <td>  26500000</td>
+      <td>  1.016884</td>
     </tr>
     <tr>
       <th>Buildings</th>
       <td>  25781053</td>
+      <td>  0.989296</td>
     </tr>
     <tr>
       <th>PERA - Civilian</th>
       <td>  22479708</td>
+      <td>  0.862614</td>
     </tr>
     <tr>
       <th>Other Personnel Benefits</th>
       <td>  21519814</td>
+      <td>  0.825780</td>
     </tr>
     <tr>
       <th>Bonus - Civilian</th>
       <td>  20948885</td>
+      <td>  0.803871</td>
     </tr>
     <tr>
       <th>Training Expenses</th>
       <td>  18711777</td>
+      <td>  0.718027</td>
     </tr>
     <tr>
       <th>Other Professional Services</th>
       <td>  18675308</td>
+      <td>  0.716627</td>
     </tr>
     <tr>
       <th>Lump-sum for Creation of New Positions - Civilian</th>
       <td>  16699757</td>
+      <td>  0.640820</td>
     </tr>
     <tr>
       <th>Donations</th>
       <td>  15830865</td>
+      <td>  0.607478</td>
     </tr>
     <tr>
       <th>Peformance Based Bonus - Civilian</th>
       <td>  14641486</td>
+      <td>  0.561838</td>
     </tr>
     <tr>
       <th>Office Supplies Expenses</th>
       <td>  14593190</td>
+      <td>  0.559984</td>
     </tr>
     <tr>
       <th>Longevity Pay - Military/Uniformed Personnel (MUP)</th>
       <td>  14291538</td>
+      <td>  0.548409</td>
     </tr>
     <tr>
       <th>Airport Systems</th>
       <td>  13331617</td>
+      <td>  0.511574</td>
     </tr>
     <tr>
       <th>Information and Communication Technology Equipment</th>
       <td>  13244814</td>
+      <td>  0.508243</td>
     </tr>
     <tr>
       <th>Traveling Expenses - Local</th>
       <td>  12366308</td>
+      <td>  0.474532</td>
     </tr>
     <tr>
       <th>Subsistence Allowance - Military/Uniformed Personnel (MUP)</th>
       <td>  12195537</td>
+      <td>  0.467979</td>
     </tr>
     <tr>
       <th>Electricity Expenses</th>
       <td>  10253042</td>
+      <td>  0.393440</td>
     </tr>
     <tr>
       <th>Fuel, Oil and Lubricants Expenses</th>
       <td>  10074599</td>
+      <td>  0.386592</td>
     </tr>
     <tr>
       <th>Hospitals and Health Centers</th>
       <td>  10043110</td>
+      <td>  0.385384</td>
     </tr>
     <tr>
       <th>Other Maintenance and Operating Expenses</th>
       <td>   9916622</td>
+      <td>  0.380530</td>
     </tr>
     <tr>
       <th>Pension Benefits - Veterans</th>
       <td>   9897026</td>
+      <td>  0.379778</td>
     </tr>
     <tr>
       <th>Salaries and Wages - Casual/Contractual</th>
       <td>   9397415</td>
+      <td>  0.360607</td>
     </tr>
     <tr>
       <th>Drugs and Medicines Expenses</th>
       <td>   9363961</td>
+      <td>  0.359323</td>
     </tr>
     <tr>
       <th>Rents - Building and Structures</th>
       <td>   8384098</td>
+      <td>  0.321723</td>
     </tr>
     <tr>
       <th>Scholarship Grants/Expenses</th>
       <td>   8191589</td>
+      <td>  0.314336</td>
     </tr>
     <tr>
       <th>Technical and Scientific Equipment</th>
       <td>   7977281</td>
+      <td>  0.306112</td>
     </tr>
     <tr>
       <th>PERA - Military/Uniformed Personnel (MUP)</th>
       <td>   7375224</td>
+      <td>  0.283009</td>
     </tr>
     <tr>
       <th>Financial Assistance to NGAs</th>
       <td>   6450511</td>
+      <td>  0.247525</td>
     </tr>
     <tr>
       <th>Medical Equipment</th>
       <td>   6124223</td>
+      <td>  0.235005</td>
     </tr>
     <tr>
       <th>Reforestation Projects</th>
       <td>   5995908</td>
+      <td>  0.230081</td>
     </tr>
     <tr>
       <th>Bonus - Military/Uniformed Personnel (MUP)</th>
       <td>   5900045</td>
+      <td>  0.226402</td>
     </tr>
     <tr>
       <th>Other Supplies and Materials Expenses</th>
       <td>   5803883</td>
+      <td>  0.222712</td>
     </tr>
     <tr>
       <th>Aircrafts and Aircrafts Ground Equipment</th>
       <td>   5483092</td>
+      <td>  0.210403</td>
     </tr>
     <tr>
       <th>Other Structures</th>
       <td>   5388688</td>
+      <td>  0.206780</td>
     </tr>
     <tr>
       <th>Overseas Allowance - Civilian</th>
       <td>   5311566</td>
+      <td>  0.203821</td>
     </tr>
     <tr>
       <th>Watercrafts</th>
       <td>   5033298</td>
+      <td>  0.193143</td>
     </tr>
     <tr>
       <th>Cash Gift - Civilian</th>
       <td>   4690970</td>
+      <td>  0.180007</td>
     </tr>
     <tr>
       <th>Clothing/Uniform Allowance - Civilian</th>
       <td>   4687330</td>
+      <td>  0.179867</td>
     </tr>
     <tr>
       <th>Motor Vehicles</th>
       <td>   4661373</td>
+      <td>  0.178871</td>
     </tr>
     <tr>
       <th>Agricultural and Marine Supplies Expenses</th>
       <td>   4627817</td>
+      <td>  0.177583</td>
     </tr>
     <tr>
       <th>Power Supply Systems</th>
       <td>   4153745</td>
+      <td>  0.159392</td>
     </tr>
     <tr>
       <th>Water Supply Systems</th>
       <td>   4016105</td>
+      <td>  0.154110</td>
     </tr>
     <tr>
       <th>Textbooks and Instructional Materials Expenses</th>
       <td>   3887446</td>
+      <td>  0.149173</td>
     </tr>
     <tr>
       <th>Other General Services</th>
       <td>   3826999</td>
+      <td>  0.146853</td>
     </tr>
     <tr>
       <th>Military, Police and Traffic Supplies Expenses</th>
       <td>   3652790</td>
+      <td>  0.140168</td>
     </tr>
     <tr>
       <th>Food Supplies Expenses</th>
       <td>   3487091</td>
+      <td>  0.133810</td>
     </tr>
     <tr>
       <th>Representation Expenses</th>
       <td>   3481173</td>
+      <td>  0.133583</td>
     </tr>
     <tr>
       <th>Medical, Dental and Laboratory Supplies Expenses</th>
       <td>   3407045</td>
+      <td>  0.130738</td>
     </tr>
     <tr>
       <th>PhilHealth - Civilian</th>
       <td>   2754843</td>
+      <td>  0.105712</td>
     </tr>
     <tr>
       <th>Water Expenses</th>
       <td>   2636013</td>
+      <td>  0.101152</td>
     </tr>
     <tr>
       <th>Accountable Forms Expenses</th>
       <td>   2626596</td>
+      <td>  0.100790</td>
     </tr>
     <tr>
       <th>Survey Expenses</th>
       <td>   2447937</td>
+      <td>  0.093935</td>
     </tr>
     <tr>
       <th>Overtime Pay</th>
       <td>   2435292</td>
+      <td>  0.093449</td>
     </tr>
     <tr>
       <th>Security Services</th>
       <td>   2343967</td>
+      <td>  0.089945</td>
     </tr>
     <tr>
       <th>Seaport Systems</th>
       <td>   2329939</td>
+      <td>  0.089407</td>
     </tr>
     <tr>
       <th>Subsidy to NGAs</th>
       <td>   2311141</td>
+      <td>  0.088685</td>
     </tr>
     <tr>
       <th>Rents - ICT Machinery and Equipment</th>
       <td>   2287511</td>
+      <td>  0.087779</td>
     </tr>
     <tr>
       <th>Consultancy Services</th>
       <td>   2231230</td>
+      <td>  0.085619</td>
     </tr>
     <tr>
       <th>Printing and Publication Expenses</th>
       <td>   2177023</td>
+      <td>  0.083539</td>
     </tr>
     <tr>
       <th>Pension Benefits - Civilian</th>
       <td>   2166539</td>
+      <td>  0.083137</td>
     </tr>
     <tr>
       <th>Landline</th>
       <td>   2109424</td>
+      <td>  0.080945</td>
     </tr>
     <tr>
       <th>Internet Subscription Expenses</th>
       <td>   2076662</td>
+      <td>  0.079688</td>
     </tr>
     <tr>
       <th>Loans Outlay - Others</th>
       <td>   2010000</td>
+      <td>  0.077130</td>
     </tr>
     <tr>
       <th>Advertising Expenses</th>
       <td>   1977915</td>
+      <td>  0.075899</td>
     </tr>
     <tr>
       <th>Productivity Incentive Allowance - Civilian</th>
       <td>   1876328</td>
+      <td>  0.072000</td>
     </tr>
     <tr>
       <th>Traveling Expenses - Foreign</th>
       <td>   1857398</td>
+      <td>  0.071274</td>
     </tr>
     <tr>
       <th>Membership Dues and Contributions to Organizations</th>
       <td>   1685309</td>
+      <td>  0.064670</td>
     </tr>
     <tr>
       <th>Furniture and Fixtures</th>
       <td>   1680060</td>
+      <td>  0.064469</td>
     </tr>
     <tr>
       <th>Quarters Allowance - Military/Uniformed Personnel (MUP)</th>
       <td>   1625390</td>
+      <td>  0.062371</td>
     </tr>
     <tr>
       <th>Representation Allowance (RA)</th>
       <td>   1621609</td>
+      <td>  0.062226</td>
     </tr>
     <tr>
       <th>Transportation Allowance (TA)</th>
       <td>   1614014</td>
+      <td>  0.061935</td>
     </tr>
     <tr>
       <th>Cash Gift - Military/Uniformed Personnel (MUP)</th>
       <td>   1536505</td>
+      <td>  0.058960</td>
     </tr>
     <tr>
       <th>Janitorial Services</th>
       <td>   1499173</td>
+      <td>  0.057528</td>
     </tr>
     <tr>
       <th>Office Equipment</th>
       <td>   1443419</td>
+      <td>  0.055388</td>
     </tr>
     <tr>
       <th>Labor and Wages</th>
       <td>   1398859</td>
+      <td>  0.053678</td>
     </tr>
     <tr>
       <th>ICT Consultancy Services</th>
       <td>   1397622</td>
+      <td>  0.053631</td>
     </tr>
     <tr>
       <th>Machinery</th>
       <td>   1343167</td>
+      <td>  0.051541</td>
     </tr>
     <tr>
       <th>Lump-sum for Personnel Services</th>
       <td>   1298819</td>
+      <td>  0.049840</td>
     </tr>
     <tr>
       <th>Hazard Duty Pay - Civilian</th>
       <td>   1292618</td>
+      <td>  0.049602</td>
     </tr>
     <tr>
       <th>Lump-sum for Step Increments - Meritorious Performance</th>
       <td>   1249965</td>
+      <td>  0.047965</td>
     </tr>
     <tr>
       <th>Subsistence Allowance - Magna Carta for Public Health Workers under R.A. 7305</th>
       <td>   1230187</td>
+      <td>  0.047206</td>
     </tr>
     <tr>
       <th>Combat Duty Pay - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>   1184862</td>
+      <td>  0.045467</td>
     </tr>
     <tr>
       <th>Special Hardship Allowance - Civilian</th>
       <td>   1174756</td>
+      <td>  0.045079</td>
     </tr>
     <tr>
       <th>Rents - Equipment</th>
       <td>   1141733</td>
+      <td>  0.043812</td>
     </tr>
     <tr>
       <th>Pag-IBIG - Civilian</th>
       <td>   1124897</td>
+      <td>  0.043166</td>
     </tr>
     <tr>
       <th>ECIP - Civilian</th>
       <td>   1123660</td>
+      <td>  0.043118</td>
     </tr>
     <tr>
       <th>Investment in Associates</th>
       <td>   1118082</td>
+      <td>  0.042904</td>
     </tr>
     <tr>
       <th>Honoraria - Civilian</th>
       <td>   1029905</td>
+      <td>  0.039521</td>
     </tr>
     <tr>
       <th>Rents - Motor Vehicles</th>
       <td>    995605</td>
+      <td>  0.038204</td>
     </tr>
     <tr>
       <th>Insurance Expenses</th>
       <td>    986678</td>
+      <td>  0.037862</td>
     </tr>
     <tr>
       <th>Mobile</th>
       <td>    963637</td>
+      <td>  0.036978</td>
     </tr>
     <tr>
       <th>Environment/Sanitary Services</th>
       <td>    940197</td>
+      <td>  0.036078</td>
     </tr>
     <tr>
       <th>Extraordinary and Miscellaneous Expenses</th>
       <td>    937587</td>
+      <td>  0.035978</td>
     </tr>
     <tr>
       <th>Communication Networks</th>
       <td>    932498</td>
+      <td>  0.035783</td>
     </tr>
     <tr>
       <th>Military, Police and Security Equipment</th>
       <td>    930669</td>
+      <td>  0.035713</td>
     </tr>
     <tr>
       <th>Lump-sum for Step Increments - Length of Service</th>
       <td>    891025</td>
+      <td>  0.034191</td>
     </tr>
     <tr>
       <th>Police Benefits (NAPOLCOM)</th>
       <td>    835145</td>
+      <td>  0.032047</td>
     </tr>
     <tr>
       <th>Intelligence Expenses</th>
       <td>    832626</td>
+      <td>  0.031950</td>
     </tr>
     <tr>
       <th>Hazard Pay</th>
       <td>    828834</td>
+      <td>  0.031805</td>
     </tr>
     <tr>
       <th>PhilHealth - Military/Uniformed Personnel (MUP)</th>
       <td>    807041</td>
+      <td>  0.030969</td>
     </tr>
     <tr>
       <th>Clothing/Uniform Allowance - Replacement - Military/Uniformed Personnel (MUP)</th>
       <td>    806575</td>
+      <td>  0.030951</td>
     </tr>
     <tr>
       <th>Other Financial Charges</th>
       <td>    793660</td>
+      <td>  0.030455</td>
     </tr>
     <tr>
       <th>Other Property, Plant and Equipment</th>
       <td>    754943</td>
+      <td>  0.028969</td>
     </tr>
     <tr>
       <th>Clothing/Uniform Allowance - Military/Uniformed Personnel (MUP)</th>
       <td>    738155</td>
+      <td>  0.028325</td>
     </tr>
     <tr>
       <th>Bank Charges</th>
       <td>    728924</td>
+      <td>  0.027971</td>
     </tr>
     <tr>
       <th>Chalk Allowance</th>
       <td>    715854</td>
+      <td>  0.027469</td>
     </tr>
     <tr>
       <th>Welfare Goods Expenses</th>
       <td>    714794</td>
+      <td>  0.027429</td>
     </tr>
     <tr>
       <th>Other Land Improvements</th>
       <td>    710978</td>
+      <td>  0.027282</td>
     </tr>
     <tr>
       <th>Transportation and Delivery Expenses</th>
       <td>    696526</td>
+      <td>  0.026728</td>
     </tr>
     <tr>
       <th>Other General Services - ICT Services</th>
       <td>    667682</td>
+      <td>  0.025621</td>
     </tr>
     <tr>
       <th>Postage and Courier Services</th>
       <td>    658915</td>
+      <td>  0.025285</td>
     </tr>
     <tr>
       <th>Confidential Expenses</th>
       <td>    637793</td>
+      <td>  0.024474</td>
     </tr>
     <tr>
       <th>Historical Buildings</th>
       <td>    624088</td>
+      <td>  0.023948</td>
     </tr>
     <tr>
       <th>ICT Software Subscription</th>
       <td>    613650</td>
+      <td>  0.023548</td>
     </tr>
     <tr>
       <th>Productivity Incentive Allowance - Military/Uniformed Personnel (MUP)</th>
       <td>    612502</td>
+      <td>  0.023504</td>
     </tr>
     <tr>
       <th>Hazardous Duty Pay</th>
       <td>    586035</td>
+      <td>  0.022488</td>
     </tr>
     <tr>
       <th>Clothing/Uniform Allowance - Initial - Military/Uniformed Personnel</th>
       <td>    522693</td>
+      <td>  0.020057</td>
     </tr>
     <tr>
       <th>Per Diems - Civilian</th>
       <td>    513046</td>
+      <td>  0.019687</td>
     </tr>
     <tr>
       <th>Land</th>
       <td>    506019</td>
+      <td>  0.019417</td>
     </tr>
     <tr>
       <th>Transportation Equipment</th>
       <td>    480393</td>
+      <td>  0.018434</td>
     </tr>
     <tr>
       <th>Buildings and Other Structures</th>
       <td>    473041</td>
+      <td>  0.018152</td>
     </tr>
     <tr>
       <th>Flying Pay - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>    430151</td>
+      <td>  0.016506</td>
     </tr>
     <tr>
       <th>Subscription Expenses</th>
       <td>    413379</td>
+      <td>  0.015863</td>
     </tr>
     <tr>
       <th>Clothing/Uniform Allowance - Reenlistment - Military/Uniformed Personnel (MUP)</th>
       <td>    399414</td>
+      <td>  0.015327</td>
     </tr>
     <tr>
       <th>HP - Magna Carta Benefits for Science and Technology under R.A. 8439</th>
       <td>    380978</td>
+      <td>  0.014619</td>
     </tr>
     <tr>
       <th>ECIP - Military/Uniformed Personnel (MUP)</th>
       <td>    368765</td>
+      <td>  0.014151</td>
     </tr>
     <tr>
       <th>Pag-IBIG - Military/Uniformed Personnel (MUP)</th>
       <td>    368765</td>
+      <td>  0.014151</td>
     </tr>
     <tr>
       <th>HP - Magna Carta Benefits for Public Health Workers under R.A. 7305</th>
       <td>    344010</td>
+      <td>  0.013201</td>
     </tr>
     <tr>
       <th>Other Transportation Equipment</th>
       <td>    337339</td>
+      <td>  0.012945</td>
     </tr>
     <tr>
       <th>Communication Equipment</th>
       <td>    323253</td>
+      <td>  0.012404</td>
     </tr>
     <tr>
       <th>Awards/Rewards Expenses</th>
       <td>    317373</td>
+      <td>  0.012179</td>
     </tr>
     <tr>
       <th>Lump-sum for Equivalent-Record Form</th>
       <td>    299289</td>
+      <td>  0.011485</td>
     </tr>
     <tr>
       <th>Instructor's Duty Pay - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>    290511</td>
+      <td>  0.011148</td>
     </tr>
     <tr>
       <th>Longevity Pay - Civilian</th>
       <td>    289856</td>
+      <td>  0.011123</td>
     </tr>
     <tr>
       <th>Repairs and Maintenance -  Furniture and Fixtures</th>
       <td>    288996</td>
+      <td>  0.011090</td>
     </tr>
     <tr>
       <th>Clothing/Uniform Allowance - Special - Military/Uniformed Personnel (MUP)</th>
       <td>    284732</td>
+      <td>  0.010926</td>
     </tr>
     <tr>
       <th>Sea Duty Pay - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>    279414</td>
+      <td>  0.010722</td>
     </tr>
     <tr>
       <th>Legal Services</th>
       <td>    270130</td>
+      <td>  0.010366</td>
     </tr>
     <tr>
       <th>Training Subsistence Allowance - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>    256000</td>
+      <td>  0.009823</td>
     </tr>
     <tr>
       <th>Reservist's Pay - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>    249021</td>
+      <td>  0.009556</td>
     </tr>
     <tr>
       <th>Fidelity Bond Premiums</th>
       <td>    248064</td>
+      <td>  0.009519</td>
     </tr>
     <tr>
       <th>Overseas Allowance - Military/Uniformed Personnel (MUP)</th>
       <td>    229205</td>
+      <td>  0.008795</td>
     </tr>
     <tr>
       <th>Repairs and Maintenance - Investment Property</th>
       <td>    211509</td>
+      <td>  0.008116</td>
     </tr>
     <tr>
       <th>Longevity Pay - Magna Carta Benefits for Science and Technology under R.A. 8439</th>
       <td>    205354</td>
+      <td>  0.007880</td>
     </tr>
     <tr>
       <th>Non-Accountable Forms Expenses</th>
       <td>    202844</td>
+      <td>  0.007784</td>
     </tr>
     <tr>
       <th>Financial Assistance to NGOs/POs</th>
       <td>    199802</td>
+      <td>  0.007667</td>
     </tr>
     <tr>
       <th>Research, Exploration and Development Expenses</th>
       <td>    192378</td>
+      <td>  0.007382</td>
     </tr>
     <tr>
       <th>Lump-sum for Master Teachers</th>
       <td>    184214</td>
+      <td>  0.007069</td>
     </tr>
     <tr>
       <th>Parachutist Pay - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>    184201</td>
+      <td>  0.007068</td>
     </tr>
     <tr>
       <th>Cable, Satellite, Telegraph and Radio Expenses</th>
       <td>    180310</td>
+      <td>  0.006919</td>
     </tr>
     <tr>
       <th>ICT Office Supplies</th>
       <td>    175386</td>
+      <td>  0.006730</td>
     </tr>
     <tr>
       <th>Subsistence Allowance - Magna Carta Benefits for Science and Technology under R.A. 8439</th>
       <td>    168159</td>
+      <td>  0.006453</td>
     </tr>
     <tr>
       <th>Livestock</th>
       <td>    164069</td>
+      <td>  0.006296</td>
     </tr>
     <tr>
       <th>Interest Paid to other General Government Units</th>
       <td>    157796</td>
+      <td>  0.006055</td>
     </tr>
     <tr>
       <th>Machinery and Equipment</th>
       <td>    153256</td>
+      <td>  0.005881</td>
     </tr>
     <tr>
       <th>Animal/Zoological Supplies Expenses</th>
       <td>    151872</td>
+      <td>  0.005828</td>
     </tr>
     <tr>
       <th>Laundry Allowance - Military/Uniformed Personnel (MUP)</th>
       <td>    120566</td>
+      <td>  0.004626</td>
     </tr>
     <tr>
       <th>Lump-sum for Reclassification of Positions</th>
       <td>    118393</td>
+      <td>  0.004543</td>
     </tr>
     <tr>
       <th>Incentive Pay - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>    118302</td>
+      <td>  0.004540</td>
     </tr>
     <tr>
       <th>Hospitalization Expenses - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>    113298</td>
+      <td>  0.004348</td>
     </tr>
     <tr>
       <th>Civil Disturbance Control Subsistence Allowance - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>    111524</td>
+      <td>  0.004280</td>
     </tr>
     <tr>
       <th>Hazard Duty Pay - Military/Uniformed Personnel (MUP)</th>
       <td>    110829</td>
+      <td>  0.004253</td>
     </tr>
     <tr>
       <th>Hostels and Dormitories</th>
       <td>    100975</td>
+      <td>  0.003875</td>
     </tr>
     <tr>
       <th>Sewer Systems</th>
       <td>    100000</td>
+      <td>  0.003837</td>
     </tr>
     <tr>
       <th>Inquest Allowance - Civilian</th>
       <td>     97065</td>
+      <td>  0.003725</td>
     </tr>
     <tr>
       <th>Marine and Fishery Equipment</th>
       <td>     85670</td>
+      <td>  0.003287</td>
     </tr>
     <tr>
       <th>ICT Training Expenses</th>
       <td>     84425</td>
+      <td>  0.003240</td>
     </tr>
     <tr>
       <th>Disaster Response and Rescue Equipment</th>
       <td>     83466</td>
+      <td>  0.003203</td>
     </tr>
     <tr>
       <th>Prizes</th>
       <td>     81203</td>
+      <td>  0.003116</td>
     </tr>
     <tr>
       <th>Special Duty Allowance - Military/Uniformed Personnel (MUP)</th>
       <td>     78612</td>
+      <td>  0.003017</td>
     </tr>
     <tr>
       <th>ICT Software</th>
       <td>     76413</td>
+      <td>  0.002932</td>
     </tr>
     <tr>
       <th>Auditing Services</th>
       <td>     71268</td>
+      <td>  0.002735</td>
     </tr>
     <tr>
       <th>Investment Property - Buildings</th>
       <td>     70386</td>
+      <td>  0.002701</td>
     </tr>
     <tr>
       <th>Laundry Allowance - Magna Carta Benefits for Public Health Workers under R.A. 7305</th>
       <td>     64526</td>
+      <td>  0.002476</td>
     </tr>
     <tr>
       <th>Aquaculture Structures</th>
       <td>     63157</td>
+      <td>  0.002424</td>
     </tr>
     <tr>
       <th>Operating Lease</th>
       <td>     57048</td>
+      <td>  0.002189</td>
     </tr>
     <tr>
       <th>Rents - Land</th>
       <td>     52762</td>
+      <td>  0.002025</td>
     </tr>
     <tr>
       <th>Agricultural and Forestry Equipment</th>
       <td>     52352</td>
+      <td>  0.002009</td>
     </tr>
     <tr>
       <th>Demolition and Relocation Expenses</th>
       <td>     43741</td>
+      <td>  0.001678</td>
     </tr>
     <tr>
       <th>Rents - Living Quarters</th>
       <td>     42849</td>
+      <td>  0.001644</td>
     </tr>
     <tr>
       <th>Investment Property - Land</th>
       <td>     36050</td>
+      <td>  0.001383</td>
     </tr>
     <tr>
       <th>Laundry Allowance - Magna Carta Benefits for Science and Technology under R.A. 8439</th>
       <td>     35987</td>
+      <td>  0.001381</td>
     </tr>
     <tr>
       <th>Construction and Heavy Equipment</th>
       <td>     27812</td>
+      <td>  0.001067</td>
     </tr>
     <tr>
       <th>Rewards and Incentives</th>
       <td>     25929</td>
+      <td>  0.000995</td>
     </tr>
     <tr>
       <th>Books</th>
       <td>     24575</td>
+      <td>  0.000943</td>
     </tr>
     <tr>
       <th>Specialist's Pay - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>     24306</td>
+      <td>  0.000933</td>
     </tr>
     <tr>
       <th>Clothing/Uniform Allowance - Cold Weather - Military/Uniformed Personnel (MUP)</th>
       <td>     24131</td>
+      <td>  0.000926</td>
     </tr>
     <tr>
       <th>Special Group Term Insurance - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>     22125</td>
+      <td>  0.000849</td>
     </tr>
     <tr>
       <th>Laundry Allowance - Civilian</th>
       <td>     21192</td>
+      <td>  0.000813</td>
     </tr>
     <tr>
       <th>Quarters Allowance - Civilian</th>
       <td>     20886</td>
+      <td>  0.000801</td>
     </tr>
     <tr>
       <th>Chemical and Filtering Supplies Expenses</th>
       <td>     19434</td>
+      <td>  0.000746</td>
     </tr>
     <tr>
       <th>Reenlistment Pay - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>     19010</td>
+      <td>  0.000729</td>
     </tr>
     <tr>
       <th>Hardship Allowance - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>     18831</td>
+      <td>  0.000723</td>
     </tr>
     <tr>
       <th>Other Lump-sum</th>
       <td>     17747</td>
+      <td>  0.000681</td>
     </tr>
     <tr>
       <th>Night-shift Differential Pay</th>
       <td>     14351</td>
+      <td>  0.000551</td>
     </tr>
     <tr>
       <th>Cloud Computing Service</th>
       <td>     13832</td>
+      <td>  0.000531</td>
     </tr>
     <tr>
       <th>Sports Equipment</th>
       <td>     11879</td>
+      <td>  0.000456</td>
     </tr>
     <tr>
       <th>Honoraria - Magna Carta Benefits for Public Health Social Workers under R.A.7305</th>
       <td>     10175</td>
+      <td>  0.000390</td>
     </tr>
     <tr>
       <th>Investment in Government-Owned and/or Controlled Corporations</th>
       <td>     10000</td>
+      <td>  0.000384</td>
     </tr>
     <tr>
       <th>Desilting and Dredging Expenses</th>
       <td>     10000</td>
+      <td>  0.000384</td>
     </tr>
     <tr>
       <th>Combat Incentive Pay - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>     10000</td>
+      <td>  0.000384</td>
     </tr>
     <tr>
       <th>Printing Equipment</th>
       <td>      9933</td>
+      <td>  0.000381</td>
     </tr>
     <tr>
       <th>Breeding Stocks</th>
       <td>      9578</td>
+      <td>  0.000368</td>
     </tr>
     <tr>
       <th>ICT Machinery and Equipment</th>
       <td>      9402</td>
+      <td>  0.000361</td>
     </tr>
     <tr>
       <th>HP - Magna Carta Benefits for Public Social Workers under R.A. 9432</th>
       <td>      9205</td>
+      <td>  0.000353</td>
     </tr>
     <tr>
       <th>Medal of Valor Award - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>      8520</td>
+      <td>  0.000327</td>
     </tr>
     <tr>
       <th>Repairs and Maintenance - Leased Assets</th>
       <td>      8466</td>
+      <td>  0.000325</td>
     </tr>
     <tr>
       <th>Subsistence Allowance - Magna Carta for Public Social Workers under R.A. 9432</th>
       <td>      8028</td>
+      <td>  0.000308</td>
     </tr>
     <tr>
       <th>Subsistence of Detainees - Duty Based Allowance - Military/Uniformed Personnel ( DBA-MUP )</th>
       <td>      7998</td>
+      <td>  0.000307</td>
     </tr>
     <tr>
       <th>Ground Water Monitoring Stations</th>
       <td>      7250</td>
+      <td>  0.000278</td>
     </tr>
     <tr>
       <th>Lump-sum for NBC No. 308</th>
       <td>      6041</td>
+      <td>  0.000232</td>
     </tr>
     <tr>
       <th>Computer Software</th>
       <td>      5573</td>
+      <td>  0.000214</td>
     </tr>
     <tr>
       <th>RATA of Sectoral/Alternate Sectoral Representatives</th>
       <td>      4170</td>
+      <td>  0.000160</td>
     </tr>
     <tr>
       <th>Other Subscription Expenses</th>
       <td>      4152</td>
+      <td>  0.000159</td>
     </tr>
     <tr>
       <th>Website Maintenance</th>
       <td>      3008</td>
+      <td>  0.000115</td>
     </tr>
     <tr>
       <th>Litigation/Acquired Assets Expenses</th>
       <td>      2975</td>
+      <td>  0.000114</td>
     </tr>
     <tr>
       <th>Trees, Plants and Crops</th>
       <td>      2100</td>
+      <td>  0.000081</td>
     </tr>
     <tr>
       <th>Clothing/Uniform Allowance - Winter - Military/Uniformed Personnel (MUP)</th>
       <td>      1825</td>
+      <td>  0.000070</td>
     </tr>
     <tr>
       <th>Longevity Pay - Magna Carta Benefits fo Public Health Workers under R.A. 7305</th>
       <td>      1507</td>
+      <td>  0.000058</td>
     </tr>
     <tr>
       <th>Repairs and Maintenance - Furniture and Fixtures</th>
       <td>      1206</td>
+      <td>  0.000046</td>
     </tr>
     <tr>
       <th>Parks, Plazas, and Monuments</th>
       <td>      1000</td>
+      <td>  0.000038</td>
     </tr>
     <tr>
       <th>High Risk Duty Pay</th>
       <td>       893</td>
+      <td>  0.000034</td>
     </tr>
     <tr>
       <th>Allowance of PAO Lawyers and Employees Assigned in Night Courts - Civilian</th>
       <td>       576</td>
+      <td>  0.000022</td>
     </tr>
     <tr>
       <th>Generation, Transmission and Distribution Expenses</th>
       <td>       527</td>
+      <td>  0.000020</td>
     </tr>
     <tr>
       <th>Other Leased Assets Improvements</th>
       <td>       443</td>
+      <td>  0.000017</td>
     </tr>
     <tr>
       <th>Airport Equipment</th>
       <td>       434</td>
+      <td>  0.000017</td>
     </tr>
     <tr>
       <th>Work/Zoo Animals</th>
       <td>       380</td>
+      <td>  0.000015</td>
     </tr>
     <tr>
       <th>Hotels and Dormitories</th>
       <td>       350</td>
+      <td>  0.000013</td>
     </tr>
     <tr>
       <th>ICT Generation, Transmission and Distribution Expenses</th>
       <td>       300</td>
+      <td>  0.000012</td>
     </tr>
     <tr>
       <th>Financial Lease</th>
       <td>       114</td>
+      <td>  0.000004</td>
     </tr>
     <tr>
       <th>Patents/Copyrights</th>
       <td>        15</td>
+      <td>  0.000001</td>
     </tr>
     <tr>
       <th>Allowance of Attorney's de Officio - Civilian</th>
       <td>        13</td>
+      <td>  0.000000</td>
     </tr>
     <tr>
       <th>Other Leased Assets</th>
       <td>         9</td>
+      <td>  0.000000</td>
     </tr>
     <tr>
       <th>ICT Research, Exploration and Development Expenses</th>
       <td>         5</td>
+      <td>  0.000000</td>
     </tr>
   </tbody>
 </table>
@@ -3431,7 +3618,7 @@ In&nbsp;[115]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[116]:
+In&nbsp;[640]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3464,23 +3651,159 @@ In&nbsp;[116]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[245]:
+In&nbsp;[641]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="n">search</span> <span class="o">=</span> <span class="s">&#39;Mobile|ICT|Software|Website|Database|Landline|Internet|Cloud|Information and Communication|Communication Equipment|Communication Network|Cable|MITHI|Internet|Computer&#39;</span>
-
-<span class="n">ict_item_department</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="o">.</span><span class="n">Objective</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">search</span><span class="p">,</span><span class="n">na</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Department&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">ict_item_objectives</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="o">.</span><span class="n">Objective</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">search</span><span class="p">,</span><span class="n">na</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Objective&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">ict_budget_items</span><span class="o">=</span><span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="o">.</span><span class="n">Objective</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">search</span><span class="p">,</span><span class="n">na</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
+<span class="n">ict_item_department</span> <span class="o">=</span> <span class="n">ict_budget_items</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Department&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c">#ict_item_objectives = ict_budget_items.groupby([&#39;Category&#39;,&#39;Objective&#39;]).sum()</span>
+<span class="n">ict_item_objectives</span> <span class="o">=</span> <span class="n">ict_budget_items</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Objective&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">ict_item_objectives</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s">&#39;Amount&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">ict_item_department</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s">&#39;Amount&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">ict_item_objectives</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
-<span class="c">#ict_item_department</span>
-<span class="n">ict_budget_items</span><span class="o">=</span><span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="o">.</span><span class="n">Objective</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">search</span><span class="p">,</span><span class="n">na</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
+<span class="n">ict_item_objectives</span><span class="p">[</span><span class="s">&#39;Share %&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ict_item_objectives</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">ict_item_objectives</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">ict_item_department</span><span class="p">[</span><span class="s">&#39;Share %&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ict_item_department</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">ict_item_department</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
+
 <span class="c">#ict_budget_items.to_csv(&#39;ICT Budget Items.csv&#39;)</span>
+<span class="c">#ict_item_department</span>
+<span class="n">ict_item_objectives</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[641]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Amount</th>
+      <th>Share %</th>
+    </tr>
+    <tr>
+      <th>Objective</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Information and Communication Technology Equipment</th>
+      <td> 13244814</td>
+      <td> 52.631034</td>
+    </tr>
+    <tr>
+      <th>Rents - ICT Machinery and Equipment</th>
+      <td>  2287511</td>
+      <td>  9.089903</td>
+    </tr>
+    <tr>
+      <th>Landline</th>
+      <td>  2109424</td>
+      <td>  8.382237</td>
+    </tr>
+    <tr>
+      <th>Internet Subscription Expenses</th>
+      <td>  2076662</td>
+      <td>  8.252050</td>
+    </tr>
+    <tr>
+      <th>ICT Consultancy Services</th>
+      <td>  1397622</td>
+      <td>  5.553743</td>
+    </tr>
+    <tr>
+      <th>Mobile</th>
+      <td>   963637</td>
+      <td>  3.829213</td>
+    </tr>
+    <tr>
+      <th>Communication Networks</th>
+      <td>   932498</td>
+      <td>  3.705476</td>
+    </tr>
+    <tr>
+      <th>Other General Services - ICT Services</th>
+      <td>   667682</td>
+      <td>  2.653174</td>
+    </tr>
+    <tr>
+      <th>ICT Software Subscription</th>
+      <td>   613650</td>
+      <td>  2.438466</td>
+    </tr>
+    <tr>
+      <th>Communication Equipment</th>
+      <td>   323253</td>
+      <td>  1.284513</td>
+    </tr>
+    <tr>
+      <th>Cable, Satellite, Telegraph and Radio Expenses</th>
+      <td>   180310</td>
+      <td>  0.716499</td>
+    </tr>
+    <tr>
+      <th>ICT Office Supplies</th>
+      <td>   175386</td>
+      <td>  0.696933</td>
+    </tr>
+    <tr>
+      <th>ICT Training Expenses</th>
+      <td>    84425</td>
+      <td>  0.335480</td>
+    </tr>
+    <tr>
+      <th>ICT Software</th>
+      <td>    76413</td>
+      <td>  0.303643</td>
+    </tr>
+    <tr>
+      <th>Cloud Computing Service</th>
+      <td>    13832</td>
+      <td>  0.054964</td>
+    </tr>
+    <tr>
+      <th>ICT Machinery and Equipment</th>
+      <td>     9402</td>
+      <td>  0.037361</td>
+    </tr>
+    <tr>
+      <th>Computer Software</th>
+      <td>     5573</td>
+      <td>  0.022145</td>
+    </tr>
+    <tr>
+      <th>Website Maintenance</th>
+      <td>     3008</td>
+      <td>  0.011953</td>
+    </tr>
+    <tr>
+      <th>ICT Generation, Transmission and Distribution Expenses</th>
+      <td>      300</td>
+      <td>  0.001192</td>
+    </tr>
+    <tr>
+      <th>ICT Research, Exploration and Development Expenses</th>
+      <td>        5</td>
+      <td>  0.000020</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -3507,20 +3830,264 @@ In&nbsp;[245]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[248]:
+In&nbsp;[642]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">search_data</span> <span class="o">=</span> <span class="s">&#39;BalinkBayan Portal|Software System|Information System|Data banking|Data Management|Knowledge Management|Information Management|Computerization|Information technology&#39;</span>
-<span class="n">a</span><span class="o">=</span><span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="o">.</span><span class="n">Description</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">search_data</span><span class="p">,</span><span class="n">na</span><span class="o">=</span><span class="mi">0</span><span class="p">)][[</span><span class="s">&#39;Department&#39;</span><span class="p">,</span><span class="s">&#39;Description&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Department&#39;</span><span class="p">,</span><span class="s">&#39;Description&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">ict_projects</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s">&#39;sum&#39;</span><span class="p">,</span><span class="s">&#39;count&#39;</span><span class="p">])</span>
-<span class="n">ict_projects</span><span class="o">.</span><span class="n">sort</span><span class="p">([(</span><span class="s">&#39;Amount&#39;</span><span class="p">,</span><span class="s">&#39;sum&#39;</span><span class="p">)],</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-
+<div class="highlight"><pre><span class="n">search_data</span> <span class="o">=</span> <span class="s">&#39;BalinkBayan Portal|Digitization|Software System|Information System|Data banking|Data Management|Knowledge Management|Information Management|Computerization|Information technology&#39;</span>
 <span class="n">ict_project_details</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="o">.</span><span class="n">Description</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">search_data</span><span class="p">,</span><span class="n">na</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
-<span class="n">ict_project_details</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">&#39;ICT Project Details.csv&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="o">=</span><span class="n">ict_project_details</span><span class="p">[</span><span class="n">ict_project_details</span><span class="o">.</span><span class="n">NEP</span><span class="o">==</span><span class="s">&#39;NEW&#39;</span><span class="p">][[</span><span class="s">&#39;Department&#39;</span><span class="p">,</span><span class="s">&#39;Description&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Department&#39;</span><span class="p">,</span><span class="s">&#39;Description&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">ict_projects</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s">&#39;sum&#39;</span><span class="p">,</span><span class="s">&#39;count&#39;</span><span class="p">])</span>
+
+<span class="c">#ict_project_details.to_csv(&#39;ICT Project Details.csv&#39;)</span>
+<span class="n">ict_descriptions</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s">&#39;sum&#39;</span><span class="p">,</span><span class="s">&#39;count&#39;</span><span class="p">])</span>
+<span class="n">ict_descriptions</span><span class="o">.</span><span class="n">sort</span><span class="p">([(</span><span class="s">&#39;Amount&#39;</span><span class="p">,</span><span class="s">&#39;sum&#39;</span><span class="p">)],</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">ict_descriptions</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[642]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2" halign="left">Amount</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>sum</th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Department of Education Computerization Program</th>
+      <td> 8530763</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Digitization Empowerment Program</th>
+      <td> 2670154</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Revenue Information Systems Development and Maintenance</th>
+      <td> 1187427</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Digitization Empowerment for Basic Education</th>
+      <td>  453436</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Planning , Monitoring, Information Management and Systems Development</th>
+      <td>  358070</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Data Management including Systems Development and Maintenance</th>
+      <td>  323754</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Information System Strategic Plan</th>
+      <td>  296813</td>
+      <td> 2</td>
+    </tr>
+    <tr>
+      <th>Enterprise Information Systems Plan (EISP)</th>
+      <td>  175000</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Health Information Systems and Technology Development</th>
+      <td>  117897</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Planning and Management Information Systems</th>
+      <td>   94016</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Data Processing, Updating including Resource Information Management and Statistical Services</th>
+      <td>   36202</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Planning, Monitoring and Knowledge Management</th>
+      <td>   35961</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Information Technology and Data Management Services</th>
+      <td>   34896</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Climate Data Management, Agrometeorological and Weather Modification Research and Development</th>
+      <td>   31782</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Computerization of licensure examination processes and regulations</th>
+      <td>   29823</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Management of Information Systems</th>
+      <td>   28197</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Computerization Program</th>
+      <td>   18873</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Provision of Capacity Building, Knowledge Management Services, Legal Services and Information Systems and Technology Development and Maintenance</th>
+      <td>   17518</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Information System Strategic Plan (ISSP)</th>
+      <td>   17440</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Higher Education Management Information System (HEMIS)</th>
+      <td>   12040</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Information Systems Development and Maintenance</th>
+      <td>   11413</td>
+      <td> 2</td>
+    </tr>
+    <tr>
+      <th>BalinkBayan Portal</th>
+      <td>   11361</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Development Planning and Knowledge Management</th>
+      <td>   11333</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Information System Development and Maintenance</th>
+      <td>   10914</td>
+      <td> 2</td>
+    </tr>
+    <tr>
+      <th>Implementation of the Management Information System</th>
+      <td>   10413</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Planning, Research, Monitoring and Information Systems Management</th>
+      <td>   10315</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Operation and Maintenance of Computerized Management Information System</th>
+      <td>    7857</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Evaluation, Coordination and Monitoring of Industrial Programs/Projects and Management Information System</th>
+      <td>    5828</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Planning, Policy Formulation and Management Information System</th>
+      <td>    5800</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Geographical Information System (GIS) Building (Completion) - Northern LA Union Campus</th>
+      <td>    4975</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Development of a crime reporting and recording system and establishment, coordination and maintenance of the National Crime Information System (NCIS)</th>
+      <td>    4940</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Computerization - GIFMIS</th>
+      <td>    4838</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Operation of the Nutrition Management Information System</th>
+      <td>    4674</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Information System Strategic Plan (Instructional Support) - College of Agribusiness, Fisheries and Marine Sciences ( CAFMS - Malita Campus)</th>
+      <td>    3573</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Development of Shelter Monitoring Information System</th>
+      <td>    2152</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Development of Front-line Services Information Systems</th>
+      <td>    1101</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Unified College Information System</th>
+      <td>    1016</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Development and Maintenance of the Information System</th>
+      <td>     900</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Development and maintenance of NCAA Information System which includes Cultural Data Banking and Public Information Services</th>
+      <td>     600</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>Internal Project 4: JRMSU Higher Education Services Management Information System (JRMSU-HESMIS)</th>
+      <td>     586</td>
+      <td> 1</td>
+    </tr>
+    <tr>
+      <th>National Museum's Customized Information System</th>
+      <td>     100</td>
+      <td> 1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -3538,12 +4105,11 @@ In&nbsp;[248]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[250]:
+In&nbsp;[643]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s">&#39;Amount&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-<span class="n">a</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">ict_project_details</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -3555,7 +4121,7 @@ In&nbsp;[250]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[250]:</div>
+    Out[643]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3563,169 +4129,65 @@ In&nbsp;[250]:
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Amount</th>
-    </tr>
-    <tr>
+      <th>Department</th>
+      <th>Agency</th>
       <th>Description</th>
-      <th></th>
+      <th>Category</th>
+      <th>Objective</th>
+      <th>Amount</th>
+      <th>NEP</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>BalinkBayan Portal</th>
-      <td>   11361</td>
+      <th>193</th>
+      <td> Department of Agrarian Reform (DAR)</td>
+      <td> Office of the Secretary</td>
+      <td> Planning , Monitoring, Information Management ...</td>
+      <td> Personnel Services</td>
+      <td> Retirement and Life Insurance Premiums</td>
+      <td> 2767</td>
+      <td> AUTO</td>
     </tr>
     <tr>
-      <th>Climate Data Management, Agrometeorological and Weather Modification Research and Development</th>
-      <td>   33678</td>
+      <th>194</th>
+      <td> Department of Agrarian Reform (DAR)</td>
+      <td> Office of the Secretary</td>
+      <td> Planning , Monitoring, Information Management ...</td>
+      <td> Personnel Services</td>
+      <td> Retirement and Life Insurance Premiums</td>
+      <td>  179</td>
+      <td> AUTO</td>
     </tr>
     <tr>
-      <th>Computerization - GIFMIS</th>
-      <td>    4838</td>
+      <th>195</th>
+      <td> Department of Agrarian Reform (DAR)</td>
+      <td> Office of the Secretary</td>
+      <td> Planning , Monitoring, Information Management ...</td>
+      <td> Personnel Services</td>
+      <td> Retirement and Life Insurance Premiums</td>
+      <td>  191</td>
+      <td> AUTO</td>
     </tr>
     <tr>
-      <th>Computerization Program</th>
-      <td>   18873</td>
+      <th>196</th>
+      <td> Department of Agrarian Reform (DAR)</td>
+      <td> Office of the Secretary</td>
+      <td> Planning , Monitoring, Information Management ...</td>
+      <td> Personnel Services</td>
+      <td> Retirement and Life Insurance Premiums</td>
+      <td>  159</td>
+      <td> AUTO</td>
     </tr>
     <tr>
-      <th>Computerization of licensure examination processes and regulations</th>
-      <td>   30455</td>
-    </tr>
-    <tr>
-      <th>Data Management including Systems Development and Maintenance</th>
-      <td>  325129</td>
-    </tr>
-    <tr>
-      <th>Data Processing, Updating including Resource Information Management and Statistical Services</th>
-      <td>   38635</td>
-    </tr>
-    <tr>
-      <th>Department of Education Computerization Program</th>
-      <td> 8530763</td>
-    </tr>
-    <tr>
-      <th>Development Planning and Knowledge Management</th>
-      <td>   11955</td>
-    </tr>
-    <tr>
-      <th>Development and Maintenance of the Information System</th>
-      <td>     968</td>
-    </tr>
-    <tr>
-      <th>Development and maintenance of NCAA Information System which includes Cultural Data Banking and Public Information Services</th>
-      <td>    5821</td>
-    </tr>
-    <tr>
-      <th>Development of Front-line Services Information Systems</th>
-      <td>    1101</td>
-    </tr>
-    <tr>
-      <th>Development of Shelter Monitoring Information System</th>
-      <td>    2152</td>
-    </tr>
-    <tr>
-      <th>Development of a crime reporting and recording system and establishment, coordination and maintenance of the National Crime Information System (NCIS)</th>
-      <td>    5313</td>
-    </tr>
-    <tr>
-      <th>Enterprise Information Systems Plan (EISP)</th>
-      <td>  175000</td>
-    </tr>
-    <tr>
-      <th>Evaluation, Coordination and Monitoring of Industrial Programs/Projects and Management Information System</th>
-      <td>    6364</td>
-    </tr>
-    <tr>
-      <th>Geographical Information System (GIS) Building (Completion) - Northern LA Union Campus</th>
-      <td>    4975</td>
-    </tr>
-    <tr>
-      <th>Health Information Systems and Technology Development</th>
-      <td>  119356</td>
-    </tr>
-    <tr>
-      <th>Higher Education Management Information System (HEMIS)</th>
-      <td>   12040</td>
-    </tr>
-    <tr>
-      <th>Implementation of the Management Information System</th>
-      <td>   10413</td>
-    </tr>
-    <tr>
-      <th>Information System Development and Maintenance</th>
-      <td>   11440</td>
-    </tr>
-    <tr>
-      <th>Information System Strategic Plan</th>
-      <td>  296813</td>
-    </tr>
-    <tr>
-      <th>Information System Strategic Plan (ISSP)</th>
-      <td>   17440</td>
-    </tr>
-    <tr>
-      <th>Information System Strategic Plan (Instructional Support) - College of Agribusiness, Fisheries and Marine Sciences ( CAFMS - Malita Campus)</th>
-      <td>    3573</td>
-    </tr>
-    <tr>
-      <th>Information Systems Development and Maintenance</th>
-      <td>   12805</td>
-    </tr>
-    <tr>
-      <th>Information Technology and Data Management Services</th>
-      <td>   36585</td>
-    </tr>
-    <tr>
-      <th>Internal Project 4: JRMSU Higher Education Services Management Information System (JRMSU-HESMIS)</th>
-      <td>     586</td>
-    </tr>
-    <tr>
-      <th>Management of Information Systems</th>
-      <td>   29033</td>
-    </tr>
-    <tr>
-      <th>National Museum's Customized Information System</th>
-      <td>     100</td>
-    </tr>
-    <tr>
-      <th>Operation and Maintenance of Computerized Management Information System</th>
-      <td>    8564</td>
-    </tr>
-    <tr>
-      <th>Operation of the Nutrition Management Information System</th>
-      <td>    4723</td>
-    </tr>
-    <tr>
-      <th>Planning , Monitoring, Information Management and Systems Development</th>
-      <td>  366652</td>
-    </tr>
-    <tr>
-      <th>Planning and Management Information Systems</th>
-      <td>   96517</td>
-    </tr>
-    <tr>
-      <th>Planning, Monitoring and Knowledge Management</th>
-      <td>   36603</td>
-    </tr>
-    <tr>
-      <th>Planning, Policy Formulation and Management Information System</th>
-      <td>    5800</td>
-    </tr>
-    <tr>
-      <th>Planning, Research, Monitoring and Information Systems Management</th>
-      <td>   11078</td>
-    </tr>
-    <tr>
-      <th>Provision of Capacity Building, Knowledge Management Services, Legal Services and Information Systems and Technology Development and Maintenance</th>
-      <td>   18668</td>
-    </tr>
-    <tr>
-      <th>Revenue Information Systems Development and Maintenance</th>
-      <td> 1201578</td>
-    </tr>
-    <tr>
-      <th>Unified College Information System</th>
-      <td>    1016</td>
+      <th>197</th>
+      <td> Department of Agrarian Reform (DAR)</td>
+      <td> Office of the Secretary</td>
+      <td> Planning , Monitoring, Information Management ...</td>
+      <td> Personnel Services</td>
+      <td> Retirement and Life Insurance Premiums</td>
+      <td> 3234</td>
+      <td> AUTO</td>
     </tr>
   </tbody>
 </table>
@@ -3751,7 +4213,7 @@ In&nbsp;[250]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[120]:
+In&nbsp;[644]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3759,6 +4221,13 @@ In&nbsp;[120]:
 <span class="n">ict_budget</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">ict_budget</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Amount of New Project&#39;</span><span class="p">,</span><span class="s">&#39;Count of New Projects&#39;</span><span class="p">,</span><span class="s">&#39;Amount ICT Budget Items&#39;</span><span class="p">]</span>
 <span class="n">ict_budget</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s">&#39;Amount ICT Budget Items&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c">#test_spending = ict_budget.join(departments,how=&#39;right&#39;)</span>
+<span class="c">#test_spending.fillna(0)</span>
+<span class="c">#percentage = test_spending[&#39;Amount ICT Budget Items&#39;]/test_spending[&#39;Amount&#39;]*100</span>
+<span class="c">#percentage.fillna(0).sort(ascending=False,inplace=True)</span>
+<span class="c">#percentage.sort(axis=0,ascending=False)</span>
+<span class="c">#percentage</span>
 <span class="n">ict_budget</span>
 </pre></div>
 
@@ -3771,7 +4240,7 @@ In&nbsp;[120]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[120]:</div>
+    Out[644]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -3792,22 +4261,34 @@ In&nbsp;[120]:
   </thead>
   <tbody>
     <tr>
+      <th>Department of Education (DepEd)</th>
+      <td> 9078315</td>
+      <td> 4</td>
+      <td> 8897669</td>
+    </tr>
+    <tr>
       <th>Department of Science and Technology (DOST)</th>
-      <td>   40042</td>
-      <td> 2</td>
-      <td> 3605407</td>
+      <td> 2707764</td>
+      <td> 3</td>
+      <td> 4920646</td>
+    </tr>
+    <tr>
+      <th>Department of Transportation and Communications (DOTC)</th>
+      <td>       0</td>
+      <td> 0</td>
+      <td> 2215389</td>
     </tr>
     <tr>
       <th>Department of Finance (DOF)</th>
-      <td> 1230611</td>
+      <td> 1215624</td>
       <td> 2</td>
-      <td> 1314329</td>
+      <td> 1353362</td>
     </tr>
     <tr>
-      <th>Department of Education (DepEd)</th>
-      <td> 8627380</td>
-      <td> 3</td>
-      <td>  954480</td>
+      <th>E-Government Fund</th>
+      <td>       0</td>
+      <td> 0</td>
+      <td> 1000000</td>
     </tr>
     <tr>
       <th>Budgetary Support to Government Corporations</th>
@@ -3816,160 +4297,160 @@ In&nbsp;[120]:
       <td>  901414</td>
     </tr>
     <tr>
-      <th>E-Government Fund</th>
-      <td>       0</td>
-      <td> 0</td>
-      <td>  711000</td>
-    </tr>
-    <tr>
       <th>Department of National Defense (DND)</th>
       <td>       0</td>
       <td> 0</td>
-      <td>  598790</td>
-    </tr>
-    <tr>
-      <th>Department of Budget and Management (DBM)</th>
-      <td>       0</td>
-      <td> 0</td>
-      <td>  390251</td>
-    </tr>
-    <tr>
-      <th>Department of the Interior and Local Government (DILG)</th>
-      <td>    5313</td>
-      <td> 1</td>
-      <td>  350177</td>
+      <td>  771073</td>
     </tr>
     <tr>
       <th>Commission on Elections (COMELEC)</th>
       <td>  295793</td>
       <td> 1</td>
-      <td>  293224</td>
+      <td>  540776</td>
+    </tr>
+    <tr>
+      <th>Department of the Interior and Local Government (DILG)</th>
+      <td>    4940</td>
+      <td> 1</td>
+      <td>  502947</td>
     </tr>
     <tr>
       <th>Department of Environment and Natural Resources (DENR)</th>
-      <td>  369564</td>
+      <td>  365756</td>
       <td> 3</td>
-      <td>  272767</td>
+      <td>  482475</td>
     </tr>
     <tr>
-      <th>Department of Agriculture (DA)</th>
-      <td>   36603</td>
-      <td> 1</td>
-      <td>  254145</td>
+      <th>Department of Budget and Management (DBM)</th>
+      <td>       0</td>
+      <td> 0</td>
+      <td>  435520</td>
     </tr>
     <tr>
       <th>The Judiciary </th>
       <td>  175000</td>
       <td> 1</td>
-      <td>  222950</td>
+      <td>  398156</td>
     </tr>
     <tr>
-      <th>Department of Agrarian Reform (DAR)</th>
-      <td>  366652</td>
+      <th>Department of Agriculture (DA)</th>
+      <td>   35961</td>
       <td> 1</td>
-      <td>  219159</td>
+      <td>  290155</td>
+    </tr>
+    <tr>
+      <th>National Economic and Development Authority (NEDA)</th>
+      <td>   29769</td>
+      <td> 3</td>
+      <td>  263255</td>
     </tr>
     <tr>
       <th>Other Executive Offices</th>
-      <td>   65975</td>
+      <td>   58878</td>
       <td> 9</td>
-      <td>  210806</td>
-    </tr>
-    <tr>
-      <th>Department of Social Welfare and Development (DSWD)</th>
-      <td>       0</td>
-      <td> 0</td>
-      <td>  193623</td>
-    </tr>
-    <tr>
-      <th>Congress of the Philippines</th>
-      <td>       0</td>
-      <td> 0</td>
-      <td>  179176</td>
+      <td>  262507</td>
     </tr>
     <tr>
       <th>State Universities and Colleges (SUCs)</th>
       <td>   14988</td>
       <td> 5</td>
-      <td>  172600</td>
+      <td>  261737</td>
     </tr>
     <tr>
-      <th>Department of Public Works and Highways (DPWH)</th>
+      <th>Department of Agrarian Reform (DAR)</th>
+      <td>  358070</td>
+      <td> 1</td>
+      <td>  258860</td>
+    </tr>
+    <tr>
+      <th>Department of Social Welfare and Development (DSWD)</th>
       <td>       0</td>
       <td> 0</td>
-      <td>  113198</td>
+      <td>  232827</td>
     </tr>
     <tr>
-      <th>Department of Transportation and Communications (DOTC)</th>
+      <th>Congress of the Philippines</th>
       <td>       0</td>
       <td> 0</td>
-      <td>  112363</td>
-    </tr>
-    <tr>
-      <th>Department of Health (DOH)</th>
-      <td>  124079</td>
-      <td> 2</td>
-      <td>  110321</td>
+      <td>  179696</td>
     </tr>
     <tr>
       <th>Department of Labor and Employment (DOLE)</th>
-      <td>   50348</td>
+      <td>   49716</td>
       <td> 3</td>
-      <td>  110007</td>
-    </tr>
-    <tr>
-      <th>National Economic and Development Authority (NEDA)</th>
-      <td>   31022</td>
-      <td> 3</td>
-      <td>  106969</td>
+      <td>  124146</td>
     </tr>
     <tr>
       <th>Department of Foreign Affairs (DFA)</th>
       <td>       0</td>
       <td> 0</td>
-      <td>   98514</td>
+      <td>  123636</td>
     </tr>
     <tr>
-      <th>Department of Justice (DOJ)</th>
-      <td>    2452</td>
-      <td> 1</td>
-      <td>   83571</td>
+      <th>Department of Health (DOH)</th>
+      <td>  122571</td>
+      <td> 2</td>
+      <td>  120803</td>
+    </tr>
+    <tr>
+      <th>Department of Public Works and Highways (DPWH)</th>
+      <td>       0</td>
+      <td> 0</td>
+      <td>  114388</td>
     </tr>
     <tr>
       <th>Department of Trade and Industry (DTI)</th>
       <td>       0</td>
       <td> 0</td>
-      <td>   79361</td>
+      <td>   84628</td>
     </tr>
     <tr>
-      <th>Presidential Communications Operations Office (PCOO)</th>
-      <td>   10353</td>
+      <th>Department of Justice (DOJ)</th>
+      <td>    1721</td>
       <td> 1</td>
-      <td>   51342</td>
-    </tr>
-    <tr>
-      <th>Autonomous Region in Muslim Mindanao (ARMM)</th>
-      <td>       0</td>
-      <td> 0</td>
-      <td>   42330</td>
+      <td>   84271</td>
     </tr>
     <tr>
       <th>Civil Service Commission (CSC)</th>
       <td>       0</td>
       <td> 0</td>
-      <td>   37853</td>
+      <td>   76022</td>
     </tr>
     <tr>
-      <th>Department of Tourism (DOT)</th>
+      <th>Presidential Communications Operations Office (PCOO)</th>
+      <td>    9692</td>
+      <td> 1</td>
+      <td>   52160</td>
+    </tr>
+    <tr>
+      <th>Autonomous Region in Muslim Mindanao (ARMM)</th>
       <td>       0</td>
       <td> 0</td>
-      <td>   32530</td>
+      <td>   43535</td>
+    </tr>
+    <tr>
+      <th>Office of the Ombudsman</th>
+      <td>   25297</td>
+      <td> 2</td>
+      <td>   38412</td>
     </tr>
     <tr>
       <th>Office of the President (OP)</th>
       <td>       0</td>
       <td> 0</td>
-      <td>   30166</td>
+      <td>   36371</td>
+    </tr>
+    <tr>
+      <th>Department of Tourism (DOT)</th>
+      <td>       0</td>
+      <td> 0</td>
+      <td>   34884</td>
+    </tr>
+    <tr>
+      <th>Department of Energy (DOE)</th>
+      <td>   34896</td>
+      <td> 1</td>
+      <td>   22166</td>
     </tr>
     <tr>
       <th>Commission on Audit (COA)</th>
@@ -3978,40 +4459,28 @@ In&nbsp;[120]:
       <td>   15658</td>
     </tr>
     <tr>
-      <th>Office of the Ombudsman</th>
-      <td>   26004</td>
-      <td> 2</td>
-      <td>   14303</td>
-    </tr>
-    <tr>
       <th>Allocations to Local Government Units</th>
       <td>       0</td>
       <td> 0</td>
       <td>   13038</td>
     </tr>
     <tr>
-      <th>Department of Energy (DOE)</th>
-      <td>   36585</td>
-      <td> 1</td>
-      <td>   12446</td>
-    </tr>
-    <tr>
       <th>Commission on Human Rights (CHR)</th>
       <td>       0</td>
       <td> 0</td>
-      <td>    6300</td>
+      <td>    6585</td>
     </tr>
     <tr>
       <th>Office of the Vice-President (OVP)</th>
       <td>       0</td>
       <td> 0</td>
-      <td>    5980</td>
+      <td>    6190</td>
     </tr>
     <tr>
       <th>Joint Legislative-Executive Councils</th>
       <td>       0</td>
       <td> 0</td>
-      <td>      45</td>
+      <td>      50</td>
     </tr>
   </tbody>
 </table>
@@ -4036,7 +4505,7 @@ In&nbsp;[120]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[121]:
+In&nbsp;[645]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4052,14 +4521,14 @@ In&nbsp;[121]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[121]:</div>
+    Out[645]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-Amount of New Project      11508764
-Count of New Projects            42
-Amount ICT Budget Items    11920593
+Amount of New Project      14584751
+Count of New Projects            44
+Amount ICT Budget Items    25165407
 dtype: float64
 </pre>
 </div>
@@ -4083,13 +4552,13 @@ dtype: float64
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[122]:
+In&nbsp;[646]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">department</span> <span class="o">=</span> <span class="s">&#39;Department of Science and Technology (DOST)&#39;</span>
-<span class="n">temp</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[(</span><span class="n">all_data</span><span class="o">.</span><span class="n">Department</span> <span class="o">==</span> <span class="n">department</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">all_data</span><span class="o">.</span><span class="n">Description</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">search_data</span><span class="p">,</span><span class="n">na</span><span class="o">=</span><span class="mi">0</span><span class="p">))]</span>
-<span class="n">temp</span><span class="p">[[</span><span class="s">&#39;Agency&#39;</span><span class="p">,</span><span class="s">&#39;Description&#39;</span><span class="p">,</span><span class="s">&#39;Objective&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Agency&#39;</span><span class="p">,</span><span class="s">&#39;Description&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">inc</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Other Executive Offices&#39;</span><span class="p">,</span><span class="s">&#39;Department of Science and Technology (DOST)&#39;</span><span class="p">]</span>
+<span class="n">department</span> <span class="o">=</span> <span class="s">&#39;Other Executive Offices&#39;</span>
+<span class="n">ict_project_details</span><span class="p">[</span><span class="n">ict_project_details</span><span class="o">.</span><span class="n">Department</span><span class="o">==</span><span class="n">department</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Agency&#39;</span><span class="p">,</span><span class="s">&#39;Description&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -4101,7 +4570,7 @@ In&nbsp;[122]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[122]:</div>
+    Out[646]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4120,18 +4589,713 @@ In&nbsp;[122]:
   </thead>
   <tbody>
     <tr>
-      <th>Industrial Technology Development Institute</th>
-      <th>Evaluation, Coordination and Monitoring of Industrial Programs/Projects and Management Information System</th>
-      <td>  6364</td>
+      <th>Commission on Filipinos Overseas</th>
+      <th>BalinkBayan Portal</th>
+      <td> 11361</td>
     </tr>
     <tr>
-      <th>Philippine Atmospheric, Geophysical and Astronomical Services Administration</th>
-      <th>Climate Data Management, Agrometeorological and Weather Modification Research and Development</th>
-      <td> 33678</td>
+      <th>Commission on Higher Education</th>
+      <th>Higher Education Management Information System (HEMIS)</th>
+      <td> 12040</td>
+    </tr>
+    <tr>
+      <th>Energy Regulatory Commission</th>
+      <th>Information System Development and Maintenance</th>
+      <td>  9499</td>
+    </tr>
+    <tr>
+      <th>Housing and Urban Development Coordinating Council</th>
+      <th>Development of Shelter Monitoring Information System</th>
+      <td>  2152</td>
+    </tr>
+    <tr>
+      <th>Mindanao Development Authority</th>
+      <th>Development Planning and Knowledge Management</th>
+      <td> 11955</td>
+    </tr>
+    <tr>
+      <th>National Commission for Culture and the Arts-Proper</th>
+      <th>Development and maintenance of NCAA Information System which includes Cultural Data Banking and Public Information Services</th>
+      <td>  5821</td>
+    </tr>
+    <tr>
+      <th>National Commission on Muslim Filipinos (Office on Muslim Affairs)</th>
+      <th>Planning, Research, Monitoring and Information Systems Management</th>
+      <td> 11078</td>
+    </tr>
+    <tr>
+      <th>National Historical Commission of the Philippines</th>
+      <th>Development and Maintenance of the Information System</th>
+      <td>   968</td>
+    </tr>
+    <tr>
+      <th>Philippine Commission on Women (National Commission on the Role of Filipino Women)</th>
+      <th>Development of Front-line Services Information Systems</th>
+      <td>  1101</td>
     </tr>
   </tbody>
 </table>
 </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[647]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">descr</span> <span class="o">=</span> <span class="s">&#39;Information System Development and Maintenance&#39;</span>
+<span class="n">ict_project_details</span><span class="p">[</span><span class="n">ict_project_details</span><span class="o">.</span><span class="n">Description</span> <span class="o">==</span> <span class="n">descr</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[647]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Department</th>
+      <th>Agency</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Objective</th>
+      <th>Amount</th>
+      <th>NEP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>37136 </th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>            Retirement and Life Insurance Premiums</td>
+      <td>  103</td>
+      <td> AUTO</td>
+    </tr>
+    <tr>
+      <th>37504 </th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>            Retirement and Life Insurance Premiums</td>
+      <td>  423</td>
+      <td> AUTO</td>
+    </tr>
+    <tr>
+      <th>347834</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                           Basic Salary - Civilian</td>
+      <td>  862</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347835</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                                   PERA - Civilian</td>
+      <td>   72</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347836</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>             Clothing/Uniform Allowance - Civilian</td>
+      <td>   15</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347837</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>       Productivity Incentive Allowance - Civilian</td>
+      <td>    6</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347838</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                                  Bonus - Civilian</td>
+      <td>   72</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347839</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                              Cash Gift - Civilian</td>
+      <td>   15</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347840</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                               Pag-IBIG - Civilian</td>
+      <td>    4</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347841</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                             PhilHealth - Civilian</td>
+      <td>    9</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347842</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                                   ECIP - Civilian</td>
+      <td>    4</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347843</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>  Lump-sum for Step Increments - Length of Service</td>
+      <td>    2</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347844</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                        Traveling Expenses - Local</td>
+      <td>    2</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347845</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                      Traveling Expenses - Foreign</td>
+      <td>   20</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347846</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                                 Training Expenses</td>
+      <td>    5</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347847</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                          Office Supplies Expenses</td>
+      <td>   54</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347848</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                        Accountable Forms Expenses</td>
+      <td>    1</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347849</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                 Fuel, Oil and Lubricants Expenses</td>
+      <td>    5</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347850</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>             Other Supplies and Materials Expenses</td>
+      <td>    1</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347851</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                                    Water Expenses</td>
+      <td>    4</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347852</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                              Electricity Expenses</td>
+      <td>   46</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347853</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                                            Mobile</td>
+      <td>    6</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347854</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                                          Landline</td>
+      <td>   12</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347855</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                    Internet Subscription Expenses</td>
+      <td>    4</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347856</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                                         Machinery</td>
+      <td>    4</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347857</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                                  Office Equipment</td>
+      <td>   54</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347858</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                                    Motor Vehicles</td>
+      <td>   47</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347859</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td> Repairs and Maintenance -  Furniture and Fixtures</td>
+      <td>    5</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347860</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                   Rents - Building and Structures</td>
+      <td>  502</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>347861</th>
+      <td> National Economic and Development Authority (N...</td>
+      <td>            Tariff Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                             Subscription Expenses</td>
+      <td>    5</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352082</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                           Basic Salary - Civilian</td>
+      <td> 3529</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352083</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                                   PERA - Civilian</td>
+      <td>  108</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352084</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                     Representation Allowance (RA)</td>
+      <td>  120</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352085</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                     Transportation Allowance (TA)</td>
+      <td>  120</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352086</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>             Clothing/Uniform Allowance - Civilian</td>
+      <td>   45</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352087</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>       Productivity Incentive Allowance - Civilian</td>
+      <td>   18</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352088</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                                  Bonus - Civilian</td>
+      <td>  294</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352089</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                              Cash Gift - Civilian</td>
+      <td>   45</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352090</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                               Pag-IBIG - Civilian</td>
+      <td>   11</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352091</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                             PhilHealth - Civilian</td>
+      <td>   34</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352092</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>                                   ECIP - Civilian</td>
+      <td>   11</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352093</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td>                       Personnel Services</td>
+      <td>  Lump-sum for Step Increments - Length of Service</td>
+      <td>    9</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352094</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                        Traveling Expenses - Local</td>
+      <td>  216</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352095</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                             ICT Training Expenses</td>
+      <td>  377</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352096</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                          Office Supplies Expenses</td>
+      <td>  505</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352097</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                 Fuel, Oil and Lubricants Expenses</td>
+      <td>   36</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352098</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                                    Water Expenses</td>
+      <td>  106</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352099</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                              Electricity Expenses</td>
+      <td>  795</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352100</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                      Postage and Courier Services</td>
+      <td>   20</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352101</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                                            Mobile</td>
+      <td>   24</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352102</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                                          Landline</td>
+      <td>   50</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352103</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                    Internet Subscription Expenses</td>
+      <td>  949</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352104</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>             Other General Services - ICT Services</td>
+      <td>  900</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352105</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                              Advertising Expenses</td>
+      <td>   68</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352106</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                 Printing and Publication Expenses</td>
+      <td>   30</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352107</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                             Subscription Expenses</td>
+      <td>   27</td>
+      <td>  NEW</td>
+    </tr>
+    <tr>
+      <th>352108</th>
+      <td>                           Other Executive Offices</td>
+      <td> Energy Regulatory Commission</td>
+      <td> Information System Development and Maintenance</td>
+      <td> Maintenance and Other Operating Expenses</td>
+      <td>                         ICT Software Subscription</td>
+      <td>  629</td>
+      <td>  NEW</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[648]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">descr</span> <span class="o">=</span> <span class="s">&#39;Information System Development and Maintenance&#39;</span>
+<span class="n">descr</span> <span class="o">=</span> <span class="s">&#39;Information System&#39;</span>
+<span class="n">d</span><span class="o">=</span><span class="n">ict_project_details</span><span class="p">[</span><span class="n">ict_project_details</span><span class="o">.</span><span class="n">Description</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">descr</span><span class="p">)]</span>
+<span class="n">d</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">&#39;Agency&#39;</span><span class="p">,</span><span class="s">&#39;Objective&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c">#e=d.groupby([&#39;Objective&#39;]).sum()</span>
+<span class="c">#d.groupby([&#39;Agency&#39;]).sum()</span>
+<span class="c">#e.sort(columns=&#39;Amount&#39;,ascending=False)</span>
+<span class="n">d</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[648]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+2063237.0
+</pre>
 </div>
 
 </div>
@@ -4153,15 +5317,16 @@ In&nbsp;[122]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[123]:
+In&nbsp;[649]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">ppp</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Cloud Computing Service&quot;</span><span class="p">,</span>
+<div class="highlight"><pre><span class="n">ppp</span> <span class="o">=</span> <span class="p">[</span>
 <span class="s">&quot;Internet Subscription Expenses&quot;</span><span class="p">,</span>
-<span class="s">&quot;Landline&quot;</span><span class="p">,</span><span class="s">&quot;Mobile&quot;</span><span class="p">]</span>
+<span class="s">&quot;Landline&quot;</span><span class="p">,</span><span class="s">&quot;Mobile&quot;</span><span class="p">,</span><span class="s">&quot;Cable, Satellite, Telegraph and Radio Expenses&quot;</span><span class="p">]</span>
 
 <span class="n">c</span><span class="o">=</span><span class="n">all_data</span><span class="p">[</span><span class="n">all_data</span><span class="o">.</span><span class="n">Objective</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">ppp</span><span class="p">)]</span>
+<span class="c">#c[&#39;Amount&#39;].sum()/ict_budget[&#39;Amount ICT Budget Items&#39;].sum()*100</span>
 <span class="n">c</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
@@ -4174,12 +5339,12 @@ In&nbsp;[123]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[123]:</div>
+    Out[649]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-5163555.0
+5330033.0
 </pre>
 </div>
 
@@ -4194,7 +5359,7 @@ In&nbsp;[123]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="To-Outsource-or-In-house-IT">To Outsource or In-house IT<a class="anchor-link" href="#To-Outsource-or-In-house-IT">&#182;</a></h3>
+<h3 id="Proprietary-Software-Expenses">Proprietary Software Expenses<a class="anchor-link" href="#Proprietary-Software-Expenses">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -4202,33 +5367,16 @@ In&nbsp;[123]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[238]:
+In&nbsp;[650]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">search_data</span> <span class="o">=</span> <span class="s">&#39;BalinkBayan Portal|Software System|Information System|Data banking|Data Management|Knowledge Management|Information Management|Computerization|Information technology&#39;</span>
-<span class="n">search</span> <span class="o">=</span> <span class="n">search_data</span>
+<div class="highlight"><pre><span class="n">proprietary</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">&#39;ICT Software Subscription&#39;</span><span class="p">,</span>
+    <span class="s">&#39;ICT Software&#39;</span><span class="p">,</span>
+    <span class="s">&#39;Computer Software&#39;</span><span class="p">,</span><span class="s">&quot;Cloud Computing Service&quot;</span><span class="p">,]</span>
 
-<span class="n">benefits</span> <span class="o">=</span> <span class="p">[</span>
-       <span class="s">&#39;Basic Salary - Civilian&#39;</span><span class="p">,</span>
-       <span class="s">&#39;Retirement and Life Insurance Premiums&#39;</span><span class="p">,</span><span class="s">&#39;Bonus - Civilian&#39;</span><span class="p">,</span>
-       <span class="s">&#39;PERA - Civilian&#39;</span><span class="p">,</span>
-       <span class="s">&#39;Cash Gift - Civilian&#39;</span><span class="p">,</span> <span class="s">&#39;Clothing/Uniform Allowance - Civilian&#39;</span><span class="p">,</span>
-       <span class="s">&#39;PhilHealth - Civilian&#39;</span><span class="p">,</span>
-       <span class="s">&#39;Productivity Incentive Allowance - Civilian&#39;</span><span class="p">,</span>
-       <span class="s">&#39;ECIP - Civilian&#39;</span><span class="p">,</span><span class="s">&#39;Pag-IBIG - Civilian&#39;</span><span class="p">,</span>
-       <span class="s">&#39;Honoraria - Civilian&#39;</span><span class="p">,</span> 
-       <span class="s">&#39;Salaries and Wages - Casual/Contractual&#39;</span><span class="p">]</span>
-
-<span class="n">personnel_benefits</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[(</span><span class="n">all_data</span><span class="o">.</span><span class="n">Description</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">search_data</span><span class="p">,</span><span class="n">na</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">all_data</span><span class="o">.</span><span class="n">Objective</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">benefits</span><span class="p">))]</span>
-
-<span class="n">outsourced</span> <span class="o">=</span> <span class="p">[</span>
-       <span class="s">&#39;Other General Services - ICT Services&#39;</span><span class="p">,</span>
-       <span class="s">&#39;Consultancy Services&#39;</span><span class="p">,</span>
-       <span class="s">&#39;ICT Consultancy Services&#39;</span><span class="p">,</span>
-       <span class="s">&#39;Cloud Computing Service&#39;</span><span class="p">,</span><span class="s">&#39;Website Maintenance&#39;</span><span class="p">]</span>
-
-<span class="n">outsourced_expenses</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[(</span><span class="n">all_data</span><span class="o">.</span><span class="n">Description</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">search_data</span><span class="p">,</span><span class="n">na</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">all_data</span><span class="o">.</span><span class="n">Objective</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">outsourced</span><span class="p">))]</span>
+<span class="n">proprietary_expenses</span> <span class="o">=</span> <span class="n">all_data</span><span class="p">[(</span><span class="n">all_data</span><span class="o">.</span><span class="n">Objective</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">proprietary</span><span class="p">))]</span>
 </pre></div>
 
 </div>
@@ -4239,11 +5387,12 @@ In&nbsp;[238]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[125]:
+In&nbsp;[651]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">personnel_benefits</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="highlight"><pre><span class="n">proprietary_expenses</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">ict_budget</span><span class="p">[</span><span class="s">&#39;Amount ICT Budget Items&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">proprietary_expenses</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -4255,7 +5404,86 @@ In&nbsp;[125]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[125]:</div>
+    Out[651]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+709468.0
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="To-Outsource-or-In-house-IT-for-new-projects">To Outsource or In-house IT for new projects<a class="anchor-link" href="#To-Outsource-or-In-house-IT-for-new-projects">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[652]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">benefits</span> <span class="o">=</span> <span class="p">[</span>
+       <span class="s">&#39;Basic Salary - Civilian&#39;</span><span class="p">,</span>
+       <span class="s">&#39;Retirement and Life Insurance Premiums&#39;</span><span class="p">,</span><span class="s">&#39;Bonus - Civilian&#39;</span><span class="p">,</span>
+       <span class="s">&#39;PERA - Civilian&#39;</span><span class="p">,</span>
+       <span class="s">&#39;Cash Gift - Civilian&#39;</span><span class="p">,</span> <span class="s">&#39;Clothing/Uniform Allowance - Civilian&#39;</span><span class="p">,</span>
+       <span class="s">&#39;PhilHealth - Civilian&#39;</span><span class="p">,</span>
+       <span class="s">&#39;Productivity Incentive Allowance - Civilian&#39;</span><span class="p">,</span>
+       <span class="s">&#39;ECIP - Civilian&#39;</span><span class="p">,</span><span class="s">&#39;Pag-IBIG - Civilian&#39;</span><span class="p">,</span>
+       <span class="s">&#39;Honoraria - Civilian&#39;</span><span class="p">,</span> 
+       <span class="s">&#39;Salaries and Wages - Casual/Contractual&#39;</span><span class="p">]</span>
+
+<span class="n">personnel_benefits</span> <span class="o">=</span> <span class="n">ict_project_details</span><span class="p">[</span><span class="n">ict_project_details</span><span class="o">.</span><span class="n">Objective</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">benefits</span><span class="p">)]</span> 
+
+<span class="n">outsourced</span> <span class="o">=</span> <span class="p">[</span>
+       <span class="s">&#39;Other General Services - ICT Services&#39;</span><span class="p">,</span>
+       <span class="s">&#39;Consultancy Services&#39;</span><span class="p">,</span>
+       <span class="s">&#39;ICT Consultancy Services&#39;</span><span class="p">,</span>
+       <span class="s">&#39;Cloud Computing Service&#39;</span><span class="p">,</span><span class="s">&#39;Website Maintenance&#39;</span><span class="p">]</span>
+
+<span class="n">outsourced_expenses</span> <span class="o">=</span> <span class="n">ict_project_details</span><span class="p">[</span><span class="n">ict_project_details</span><span class="o">.</span><span class="n">Objective</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">outsourced</span><span class="p">)]</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[653]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c">#personnel_benefits[&#39;Amount&#39;].sum()/ict_budget[&#39;Amount of New Project&#39;].sum()</span>
+<span class="n">personnel_benefits</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[653]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
@@ -4273,11 +5501,12 @@ In&nbsp;[125]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[126]:
+In&nbsp;[654]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">outsourced_expenses</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="highlight"><pre><span class="c">#outsourced_expenses[&#39;Amount&#39;].sum()/ict_budget[&#39;Amount of New Project&#39;].sum()</span>
+<span class="n">outsourced_expenses</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -4289,12 +5518,12 @@ In&nbsp;[126]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[126]:</div>
+    Out[654]:</div>
 
 
 <div class="output_text output_subarea output_pyout">
 <pre>
-792143.0
+794160.0
 </pre>
 </div>
 
@@ -4317,7 +5546,7 @@ In&nbsp;[126]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[127]:
+In&nbsp;[655]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4336,7 +5565,7 @@ In&nbsp;[127]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[127]:</div>
+    Out[655]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4418,7 +5647,7 @@ In&nbsp;[127]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[128]:
+In&nbsp;[656]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -4438,7 +5667,7 @@ In&nbsp;[128]:
 
 
 <div class="output_area"><div class="prompt output_prompt">
-    Out[128]:</div>
+    Out[656]:</div>
 
 <div class="output_html rendered_html output_subarea output_pyout">
 <div style="max-height:1000px;max-width:1500px;overflow:auto;">
@@ -4575,7 +5804,7 @@ In&nbsp;[128]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Show-Appropriation-Function">Show Appropriation Function<a class="anchor-link" href="#Show-Appropriation-Function">&#182;</a></h3>
+<h3 id="Percentage-change-of-ICT-spending">Percentage change of ICT spending<a class="anchor-link" href="#Percentage-change-of-ICT-spending">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -4583,11 +5812,323 @@ In&nbsp;[128]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[657]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre> 
+<div class="highlight"><pre><span class="n">ict_budget_items</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">all_data</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">ict_budget_items</span><span class="p">[</span><span class="s">&#39;Amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[657]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+25165407.0
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[658]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="p">(</span><span class="mi">25165407</span><span class="o">-</span><span class="mi">10493789</span><span class="p">)</span><span class="o">/</span><span class="mf">10493789.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[658]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+1.3981239760014232
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[659]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="mi">25165407000</span><span class="o">/</span><span class="mf">11546000000000.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[659]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+0.002179577949073272
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="DPWH-spending-compared-(2014-vs-2015)">DPWH spending compared (2014 vs 2015)<a class="anchor-link" href="#DPWH-spending-compared-(2014-vs-2015)">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[660]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="mi">300519120</span><span class="o">-</span><span class="mi">219341196</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[660]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+81177924
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="IRA-spending-compared-(2014-vs-2015)">IRA spending compared (2014 vs 2015)<a class="anchor-link" href="#IRA-spending-compared-(2014-vs-2015)">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[661]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="mi">389860429</span><span class="o">-</span><span class="mi">341544726</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[661]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+48315703
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="total-budget">total budget<a class="anchor-link" href="#total-budget">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[662]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="mi">2606000000</span><span class="o">-</span><span class="mi">2264628503</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[662]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+341371497
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Road-Networks-(2014-vs-2015)">Road Networks (2014 vs 2015)<a class="anchor-link" href="#Road-Networks-(2014-vs-2015)">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[663]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="mi">242850463</span><span class="o">-</span><span class="mi">180311094</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[663]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+62539369
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Loading-2014-Data,-instead.-This-will-overwrite-the-2015-proposed-budget.">Loading 2014 Data, instead. This will overwrite the 2015 proposed budget.<a class="anchor-link" href="#Loading-2014-Data,-instead.-This-will-overwrite-the-2015-proposed-budget.">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[664]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c">#Data taken from DBM Site</span>
+<span class="n">auto_approp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATA_PATH</span> <span class="o">+</span> <span class="s">&quot;2015 NEP-Adjusted-Automatic.csv&quot;</span><span class="p">)</span>
+<span class="n">auto_approp</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">new_approp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATA_PATH</span> <span class="o">+</span> <span class="s">&quot;2015 NEP-Adjusted.csv&quot;</span><span class="p">)</span>
+<span class="n">new_approp</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c">#rename columns for clarity</span>
+<span class="n">new_approp</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">u&#39;uacs_dpt_id&#39;</span><span class="p">,</span> <span class="s">u&#39;Department&#39;</span><span class="p">,</span> <span class="s">u&#39;uacs_agy_id&#39;</span><span class="p">,</span> <span class="s">u&#39;Agency&#39;</span><span class="p">,</span> 
+         <span class="s">u&#39;uacs_fpap_id&#39;</span><span class="p">,</span> <span class="s">u&#39;Description&#39;</span><span class="p">,</span> <span class="s">u&#39;operdiv&#39;</span><span class="p">,</span> <span class="s">u&#39;operunit&#39;</span><span class="p">,</span> <span class="s">u&#39;uacs_oper_dsc&#39;</span><span class="p">,</span> <span class="s">u&#39;fndsrc&#39;</span><span class="p">,</span> 
+         <span class="s">u&#39;uacs_fundsubcat_dsc&#39;</span><span class="p">,</span> <span class="s">u&#39;uacs_exp_cd&#39;</span><span class="p">,</span> <span class="s">u&#39;Category&#39;</span><span class="p">,</span> <span class="s">u&#39;uacs_sobj_cd&#39;</span><span class="p">,</span> 
+         <span class="s">u&#39;Objective&#39;</span><span class="p">,</span> <span class="s">u&#39;Amount&#39;</span><span class="p">]</span>
+<span class="n">auto_approp</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">u&#39;uacs_dpt_id&#39;</span><span class="p">,</span> <span class="s">u&#39;Department&#39;</span><span class="p">,</span> <span class="s">u&#39;uacs_agy_id&#39;</span><span class="p">,</span> <span class="s">u&#39;Agency&#39;</span><span class="p">,</span> 
+         <span class="s">u&#39;uacs_fpap_id&#39;</span><span class="p">,</span> <span class="s">u&#39;Description&#39;</span><span class="p">,</span> <span class="s">u&#39;operdiv&#39;</span><span class="p">,</span> <span class="s">u&#39;operunit&#39;</span><span class="p">,</span> <span class="s">u&#39;uacs_oper_dsc&#39;</span><span class="p">,</span> <span class="s">u&#39;fndsrc&#39;</span><span class="p">,</span> 
+         <span class="s">u&#39;uacs_fundsubcat_dsc&#39;</span><span class="p">,</span> <span class="s">u&#39;uacs_exp_cd&#39;</span><span class="p">,</span> <span class="s">u&#39;Category&#39;</span><span class="p">,</span> <span class="s">u&#39;uacs_sobj_cd&#39;</span><span class="p">,</span> 
+         <span class="s">u&#39;Objective&#39;</span><span class="p">,</span> <span class="s">u&#39;Amount&#39;</span><span class="p">]</span>
+
+<span class="c">#select data for analysis</span>
+<span class="n">auto_approp_data</span> <span class="o">=</span> <span class="n">auto_approp</span><span class="p">[</span><span class="n">auto_approp</span><span class="o">.</span><span class="n">Amount</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">][[</span><span class="s">&#39;Department&#39;</span><span class="p">,</span><span class="s">&#39;Agency&#39;</span><span class="p">,</span><span class="s">&#39;Description&#39;</span><span class="p">,</span><span class="s">&#39;Category&#39;</span><span class="p">,</span><span class="s">&#39;Objective&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span>
+<span class="n">auto_approp_data</span><span class="p">[</span><span class="s">&#39;NEP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;AUTO&#39;</span>
+<span class="n">new_approp_data</span> <span class="o">=</span> <span class="n">new_approp</span><span class="p">[</span><span class="n">new_approp</span><span class="o">.</span><span class="n">Amount</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">][[</span><span class="s">&#39;Department&#39;</span><span class="p">,</span><span class="s">&#39;Agency&#39;</span><span class="p">,</span><span class="s">&#39;Description&#39;</span><span class="p">,</span><span class="s">&#39;Category&#39;</span><span class="p">,</span><span class="s">&#39;Objective&#39;</span><span class="p">,</span><span class="s">&#39;Amount&#39;</span><span class="p">]]</span>
+<span class="n">new_approp_data</span><span class="p">[</span><span class="s">&#39;NEP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;NEW&#39;</span>
+<span class="n">all_data</span> <span class="o">=</span> <span class="n">auto_approp_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_approp_data</span><span class="p">)</span>
+<span class="c">#all_data[ [u&#39;NEP&#39;,u&#39;Department&#39;, u&#39;Agency&#39;, u&#39;Description&#39;, u&#39;Category&#39;, u&#39;Objective&#39;, u&#39;Amount&#39;]].to_csv(&#39;data.csv&#39;)</span>
+<span class="c">#all_data.head()</span>
 </pre></div>
 
 </div>
