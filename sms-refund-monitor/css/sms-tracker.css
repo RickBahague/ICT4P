@@ -1,0 +1,12 @@
+body {
+  align: center;
+  padding: 0 10% 10% 10%;
+}
+
+.alert, .panel-body{
+  text-align: center;
+}
+
+span#per_user_refund_sms{
+  color: red;
+}
